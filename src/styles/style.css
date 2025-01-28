@@ -143,6 +143,7 @@ main .section-tools-technology {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    row-gap: 3rem;
 }
 
 .section-tools-technology-items {
