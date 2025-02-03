@@ -13,6 +13,33 @@
     --font-principal: "Roboto", serif;
 }
 
+@keyframes arrowBounce {
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+@keyframes resumeRover {
+    100%{
+        color: var(--veronica);
+        background-color: var(--dark-purple);
+        border-color: var(--veronica);
+        transform: translateY(5px);
+    }
+}
+
+@keyframes accesHover {
+    100%{
+        color: var(--mauve);
+        background-color: var(--dark-purple);
+        border-color: var(--mauve);
+        transform: translateY(.5px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -91,6 +118,11 @@ header {
 .contacts i {
     color: var(--veronica);
     font-size: 3rem;
+    transition: all 0.3s ease;
+}
+
+.contacts i:hover {
+    transform: translateY(3px);
 }
 
 .header-content-text .resume-button {
@@ -100,12 +132,11 @@ header {
     background-color: var(--veronica);
     border: 1px solid var(--dark-purple);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .resume-button:hover {
-    color: var(--veronica);
-    background-color: var(--dark-purple);
-    border-color: var(--veronica);
+    animation: resumeRover 300ms ease-in forwards;
 }
 
 .header-content-image {
@@ -115,6 +146,7 @@ header {
 #arrown-down {
     color: var(--veronica);
     font-size: 4.2rem;
+    animation: arrowBounce 1s ease-in-out alternate infinite;
 }
 
 main {
@@ -248,9 +280,7 @@ main .section-tools-technology {
 }
 
 .project-acess a:hover {
-    color: var(--mauve);
-    background-color: var(--dark-purple);
-    border-color: var(--mauve);
+    animation: accesHover 250ms ease-in forwards;
 }
 
 .section-training {
@@ -348,10 +378,42 @@ footer section {
 .footer-contats ul li a {
     color: var(--platinum);
     text-decoration: none;
+
+    position: relative;
 }
 
-.footer-contats ul li a:hover {
-    text-decoration: underline;
+.footer-contats ul li a:before {
+	content: "";
+	width: 0;
+	height: 3px;
+	background-color: var(--platinum);
+	transition: .8s;
+    
+	position: absolute;
+	top: 95%;
+	left: 50%;
+}
+
+.footer-contats ul li a:hover::before {
+	width: 50%;
+	height: 2px;
+}
+
+.footer-contats ul li a::after {
+    content: "";
+	width: 0;
+	height: 3px;
+	background-color: var(--platinum);
+	transition: .8s;
+
+	position: absolute;
+	top: 95%;
+	right: 50%;
+}
+
+.footer-contats ul li a:hover::after {
+	width: 50%;
+	height: 2px;
 }
 
 .copyright {
