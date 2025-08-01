@@ -1,0 +1,26 @@
+[
+	{
+		"image_path": "project-01.png",
+		"project_title": "Título do Projeto 1",
+		"description": "Uma breve descrição sobre o Projeto 1, explicando seus objetivos e funcionalidades.",
+		"technology": ["fa-brands fa-html5", "fa-brands fa-css3", "fa-brands fa-js"],
+		"link_application": "https://link-para-aplicacao-1.com",
+		"link_code": "https://link-para-codigo-1.com"
+	},
+	{
+		"image_path": "project-01.png",
+		"project_title": "Título do Projeto 2",
+		"description": "Este é o Projeto 2, focado em [área do projeto], com recursos como [recurso 1] e [recurso 2].",
+		"technology": ["fa-brands fa-react", "fa-solid fa-database", "fa-brands fa-node"],
+		"link_application": "https://link-para-aplicacao-2.com",
+		"link_code": "https://link-para-codigo-2.com"
+	},
+	{
+		"image_path": "project-01.png",
+		"project_title": "Título do Projeto 3",
+		"description": "Descrição detalhada do Projeto 3, destacando as tecnologias utilizadas e os desafios superados.",
+		"technology": ["fa-brands fa-python", "fa-solid fa-flask", "fa-brands fa-java"],
+		"link_application": "https://link-para-aplicacao-3.com",
+		"link_code": "https://link-para-codigo-3.com"
+	}
+]

@@ -86,6 +86,7 @@ body {
 	background-color: var(--color-background-light);
 	font-family: var(--font-family-base);
 	font-weight: 400;
+	overflow-x: clip;
 }
 
 /* --- BANNER DE DESENVOLVIMENTO --- */
@@ -106,7 +107,63 @@ body {
 /* ----------------------------------- HEADER ------------------------------ */
 
 .header {
-	display: none;
+	width: 100%;
+	height: 60px;
+	background-color: var(--color-background-dark);
+	z-index: 1;
+
+	position: sticky;
+	top: 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	nav {
+		ul {
+			width: 100%;
+			list-style: none;
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 200px;
+
+			li {
+				transition: color 0.2s ease, border-bottom 0.3s ease;
+
+				a {
+					text-decoration: none;
+					font-weight: 800;
+					color: var(--color-text-dark);
+					position: relative;
+
+					&::before {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						content: '';
+						height: 2px;
+						background-color: var(--color-primary-accent);
+
+						transition: width 0.5s ease;
+						width: 0%;
+					}
+				}
+
+				&.active {
+					a {
+						color: var(--color-text-light);
+
+						&::before {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 /* ----------------------------------- MAIN ------------------------------ */
@@ -114,15 +171,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 150px;
+	gap: 50px;
 
-	.banner {
+	#banner {
 		width: 100%;
-		height: calc(100vh);
+		height: calc(100vh - 60px);
 		padding: 6%;
 		padding-bottom: 30px;
 		color: var(--color-text-light);
 		background-color: var(--color-background-dark);
+		position: relative;
+		scroll-margin-top: 60px;
 
 		display: flex;
 		flex-direction: column;
@@ -131,7 +190,6 @@ body {
 
 		.banner__container {
 			width: 90%;
-			height: 750px;
 
 			display: flex;
 			flex-direction: row;
@@ -249,11 +307,19 @@ body {
 			color: var(--color-text-dark);
 			font-size: 3rem;
 			animation: arrow-bounce 1s ease-in-out alternate infinite;
+
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 
 	.section {
 		width: 90%;
+		min-height: 500px;
+		scroll-margin-top: 120px;
+
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -270,15 +336,15 @@ body {
 		margin-bottom: 50px;
 	}
 
-	.section--tools-technology {
-		.tools-technology__items {
+	#section--tools-technology {
+		#tools-technology__items {
 			width: 80%;
 
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			gap: 20px;
 
-			.tools-technology__item {
+			.tool {
 				width: 250px;
 				padding: 20px;
 				border: 1px solid var(--color-background-dark);
@@ -290,23 +356,7 @@ body {
 				justify-content: space-between;
 				gap: 30px;
 
-				.icon-html {
-					color: #e34f26;
-					font-size: 5rem;
-				}
-
-				.icon-css {
-					color: #1572b6;
-					font-size: 5rem;
-				}
-
-				.icon-js {
-					color: #f7df1e;
-					font-size: 5rem;
-				}
-
-				.icon-git {
-					color: #f1502f;
+				i {
 					font-size: 5rem;
 				}
 
@@ -318,15 +368,15 @@ body {
 		}
 	}
 
-	.section--projects {
-		.project__items {
+	#section--projects {
+		#project__items {
 			width: 80%;
 
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			gap: 20px;
 
-			.project__item {
+			.project {
 				width: 400px;
 				padding-bottom: 20px;
 				border: 1px solid var(--color-background-dark);
@@ -383,17 +433,17 @@ body {
 		}
 	}
 
-	.section--training {
+	#section--training {
 		padding: 20px;
 
-		.training__items {
+		#training__items {
 			width: 80%;
 
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			gap: 20px;
 
-			.training__item {
+			.training {
 				min-width: 180px;
 				padding: 20px;
 				color: var(--color-text-light);
@@ -409,6 +459,7 @@ body {
 					font-size: 1rem;
 					font-weight: bold;
 				}
+
 				h4 {
 					margin-bottom: -8px;
 					font-size: 1.2rem;
