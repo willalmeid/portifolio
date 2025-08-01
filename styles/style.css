@@ -4,11 +4,14 @@
 
 :root {
 	/* Cores Semânticas */
-	--color-background-dark: #10081e; /* Cor: dark-purple */
-	--color-text-dark: #34244a; /* Cor: russian-black */
-	--color-primary-accent: #a42be2; /* Cor: veronica */
-	--color-background-light: #d6b8ff; /* Cor: mauve */
-	--color-text-light: #e5e5e5; /* Cor: platinum */
+	--color-background-dark: #212121; /* Preto quase absoluto (para seções escuras, texto em destaque no escuro) */
+	--color-text-dark: #424242; /* Cinza chumbo (para texto principal no fundo claro) */
+	--color-primary-accent: #8e24aa; /* Roxo médio/escuro vibrante (o seu destaque principal) */
+	--color-background-light: #f5f5f5; /* NOVO: Branco suave para o background principal */
+	--color-text-light: #fafafa; /* Branco puro (para texto em fundos escuros) */
+
+	/* Cores Detalhes */
+	--color-primary-accent-transparent: rgba(142, 36, 170, 0.3); /* Roxo com 30% de opacidade */
 
 	/* Tipografia */
 	--font-family-base: 'Roboto', sans-serif;
@@ -52,14 +55,15 @@
 html,
 body {
 	width: 100%;
-	color: var(--color-text-dark);
-	background-color: var(--color-background-light);
+	color: var(--color-text-dark); /* Texto principal agora será cinza escuro */
+	background-color: var(--color-background-light); /* Seu novo branco suave */
 	font-family: var(--font-family-base);
 	font-weight: 400;
 }
 
 /* --- BANNER DE DESENVOLVIMENTO --- */
 .banner-development {
+	display: none;
 	width: 100%;
 	padding: 8px 0;
 	text-align: center;
@@ -97,6 +101,16 @@ body {
 
 		.header__image {
 			width: 42%;
+
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+
+				filter: drop-shadow(0 0 5px var(--color-primary-accent-transparent))
+					drop-shadow(0 0 10px var(--color-primary-accent-transparent))
+					drop-shadow(0 0 15px var(--color-primary-accent-transparent));
+			}
 		}
 
 		.header__content {
@@ -351,7 +365,7 @@ body {
 
 /* ----------------------------------- FOOTER ------------------------------ */
 .footer {
-	padding: 30px;
+	padding: 30px 0 10px;
 	color: var(--color-text-light);
 	background-color: var(--color-background-dark);
 
@@ -397,6 +411,7 @@ body {
 
 				i {
 					font-size: 1.5rem;
+					color: var(--color-text-dark);
 				}
 
 				a {
@@ -445,5 +460,15 @@ body {
 
 	.footer__copyright {
 		font-size: 0.9rem;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 20px;
+
+		img {
+			width: 20px;
+			border-radius: 50%;
+		}
 	}
 }
