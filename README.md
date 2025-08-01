@@ -1,6 +1,6 @@
 <h1 align="center"> William Almeida </h1>
 
-<img src="./src/images/image-preview.png">
+<img src="/images/image-preview.png">
 
 <p>
     Este projeto tem como objetivo a criação de uma aplicação web, com foco principal em apresentar de maneira direta quem sou. Além de servir como uma vitrine para o meu perfil profissional, a proposta também é destacar minhas competências e o conhecimento das tecnologias que fazem parte da minha área de atuação.
