@@ -19,7 +19,7 @@
 		"titration": "Curso",
 		"name": "HTML5 e CSS3",
 		"institution": "Curso em Video",
-		"campus": null,
+		"campus": "",
 		"start_date": "40h",
 		"end_date": "2024"
 	},
@@ -27,7 +27,7 @@
 		"titration": "Curso",
 		"name": "Java Script",
 		"institution": "Curso em Video",
-		"campus": null,
+		"campus": "",
 		"start_date": "40h",
 		"end_date": "2025"
 	}
