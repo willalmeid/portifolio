@@ -15,7 +15,7 @@ async function loadTools() {
 
 			tollDiv.innerHTML = `
                 <i class="${item.icon_class}" style="color: ${item.color};"></i>
-                <h4>${item.nome}</h4>
+                <h4>${item.name}</h4>
                 <p>${item.description}</p>
             `;
 			tollsContainer.appendChild(tollDiv);
@@ -52,19 +52,23 @@ async function loadProjects() {
 			projectDiv.innerHTML = `
                 <img class="project__image" src="/images/img-projects/${item.image_path}" alt="imagem do projeto" />
 
-                <h3>${item.project_title}</h3>
+				<div class="project__information">
+					<h3>${item.project_title}</h3>
 
-                <p>
-                    ${item.description}
-                </p>
+					<p>
+						${item.description}
+					</p>
+				</div>
 
-                <h4>Tecnologias Utilizadas</h4>
+				<div class="project__tolls">
+					<h4>Tecnologias Utilizadas</h4>
 
-                <ul class="project__tech-list">
-                    <li><i class="${item.technology[0]} icon-project-technology"></i></li>
-                    <li><i class="${item.technology[1]} icon-project-technology"></i></li>
-                    <li><i class="${item.technology[2]} icon-project-technology"></i></li>
-                </ul>
+					<ul class="project__tech-list">
+						<li><i class="${item.technology[0]} icon-project-technology"></i></li>
+						<li><i class="${item.technology[1]} icon-project-technology"></i></li>
+						<li><i class="${item.technology[2]} icon-project-technology"></i></li>
+					</ul>
+				</div>
 
                 <div class="project__access">
                     <a href="${item.link_application}" target="_blank">aplicação</a>
