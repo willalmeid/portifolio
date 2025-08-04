@@ -1,0 +1,52 @@
+/* 
+   ==========================================================================
+   Base: Variáveis CSS
+   Definições de cores, fontes, tamanhos e espaçamentos globais.
+   ==========================================================================
+*/
+:root {
+	/* Cores Semânticas */
+	--color-background-dark: #212121; /* Preto quase absoluto (para seções escuras, texto em destaque no escuro) */
+	--color-background-light: #f9f9f9; /* Branco suave para o background principal */
+	--color-text-dark: #424242; /* Cinza chumbo (para texto principal no fundo claro) */
+	--color-text-light: #fafafa; /* Branco puro (para texto em fundos escuros) */
+	--color-primary-accent: #8e24aa; /* Roxo médio/escuro vibrante (o seu destaque principal) */
+
+	/* Cores Detalhes */
+	--color-accent-translucent-30: rgba(142, 36, 170, 0.3); /* Roxo com 30% de opacidade */
+	--color-dark-translucent-30: rgba(66, 66, 66, 0.3); /* Cinza chumbo com 30% de opacidade */
+	--color-light-translucent-30: rgba(250, 250, 250, 0.3); /* Branco puro com 30% de opacidade */
+
+	/* Tipografia */
+	--font-family-base: 'Roboto', sans-serif;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+	--font-weight-bolder: 900;
+
+	/* Tamanhos de Fonte em REM */
+	--font-size-xs: 0.8rem; /* ~12.8px */
+	--font-size-sm: 0.9rem; /* ~14.4px */
+	--font-size-base: 1rem; /* 16px (base do navegador) */
+	--font-size-md: 1.1rem; /* ~17.6px */
+	--font-size-lg: 1.2rem; /* ~19.2px */
+	--font-size-xl: 1.4rem; /* ~22.4px */
+	--font-size-2xl: 1.55rem; /* ~24.8px */
+	--font-size-3xl: 2rem; /* 32px */
+	--font-size-4xl: 2.5rem; /* 40px */
+	--font-size-5xl: 2.8rem; /* ~44.8px */
+	--font-size-6xl: 3rem; /* 48px */
+	--font-size-7xl: 3.2rem; /* ~51.2px */
+
+	/* Tamanhos de Ícones */
+	--font-size-icon-sm: 1.5rem; /* 24px para ícones menores */
+	--font-size-icon-md: 2rem; /* 32px para ícones médios */
+	--font-size-icon-lg: 5rem; /* 80px para ícones grandes */
+
+	/* Espaçamento */
+	--spacing-xs: 0.5rem; /* 8px */
+	--spacing-sm: 1rem; /* 16px */
+	--spacing-md: 1.5rem; /* 24px */
+	--spacing-lg: 2rem; /* 32px */
+	--spacing-xl: 3rem; /* 48px */
+	--spacing-2xl: 4rem; /* 64px */
+}

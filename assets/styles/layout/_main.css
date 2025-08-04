@@ -1,0 +1,369 @@
+/*
+   ==========================================================================
+   Layout: Conteúdo Principal e Seções Específicas
+   Estilos para o contêiner principal e as implementações das seções da página.
+   ==========================================================================
+*/
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-xl); /* 50px */
+}
+
+/*
+   ==========================================================================
+   Seção Hero Banner
+   ==========================================================================
+*/
+.hero-banner {
+	width: 100%;
+	height: calc(100vh - 60px); /* 60px é a altura do header */
+	padding: 6%;
+	padding-bottom: var(--spacing-md); /* 30px */
+	color: var(--color-text-light);
+	background-color: var(--color-background-dark);
+	scroll-margin-top: 60px; /* offset para rolagem suave */
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-2xl); /* 100px */
+}
+
+.hero-banner__container {
+	width: 90%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-banner__image {
+	width: 42%;
+	height: auto;
+}
+
+.hero-banner__image img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.hero-banner__content {
+	width: 50%;
+	padding: var(--spacing-md); /* 20px */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-xl); /* 50px */
+}
+
+.hero-banner__titles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-banner__titles h1 {
+	margin-bottom: 0;
+	font-size: var(--font-size-6xl);
+	font-weight: var(--font-weight-bold);
+}
+
+.hero-banner__titles .text-highlight {
+	font-size: var(--font-size-7xl);
+	font-weight: var(--font-weight-bolder);
+	color: var(--color-text-dark);
+}
+
+.hero-banner__titles .text-highlight:hover {
+	color: var(--color-primary-accent);
+	filter: drop-shadow(0px 0px 10px var(--color-light-translucent-30));
+}
+
+.hero-banner__specialization {
+	font-size: var(--font-size-4xl);
+	font-weight: var(--font-weight-bold);
+}
+
+.hero-banner__specialization .text-highlight {
+	font-size: var(--font-size-5xl);
+}
+
+.hero-banner__social-links {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--spacing-xl); /* 50px */
+}
+
+.hero-banner__social-links i {
+	font-size: var(--font-size-icon-md);
+	color: var(--color-text-dark);
+	transition: all 0.3s ease;
+}
+
+.hero-banner__social-links i:hover {
+	color: var(--color-primary-accent);
+	transform: translateY(3px);
+	filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+}
+
+/* --- Seta para Baixo --- */
+#arrow-down {
+	font-size: var(--font-size-6xl);
+	color: var(--color-text-dark);
+
+	position: absolute;
+	bottom: var(--spacing-md); /* 30px */
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md); /* 20px */
+}
+
+.about-me p {
+	margin-bottom: 0;
+	text-align: justify;
+	font-size: var(--font-size-xl);
+	line-height: 1.5;
+}
+
+.about-me__call-to-action {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-dark);
+}
+
+/*
+   ==========================================================================
+   Seção de Ferramentas e Tecnologias
+   ==========================================================================
+*/
+#section--tools-technology {
+	width: 100%;
+}
+
+#tools-technology__items {
+	width: 85%;
+	padding: var(--spacing-sm);
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--spacing-md);
+	justify-items: center;
+}
+
+/* Item individual de ferramenta */
+.tool {
+	width: 250px;
+	padding: var(--spacing-md);
+	border: 1px solid var(--color-background-dark);
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--spacing-sm);
+	transition: all 0.3s ease;
+}
+
+.tool i {
+	font-size: var(--font-size-icon-lg);
+	color: var(--color-primary-accent);
+}
+
+.tool p {
+	text-align: center;
+	font-size: var(--font-size-sm);
+	margin-bottom: 0;
+}
+
+/*
+   ==========================================================================
+   Seção de Projetos
+   ==========================================================================
+*/
+#section--projects {
+	width: 100%;
+}
+
+#project__items {
+	padding: var(--spacing-sm);
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacing-md);
+	align-items: start;
+	justify-content: center;
+}
+
+/* Item individual de projeto */
+.project {
+	width: 400px;
+	padding-bottom: var(--spacing-md);
+	border: 1px solid var(--color-background-dark);
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-lg);
+	transition: all 0.5s ease;
+}
+
+.project:hover {
+	box-shadow: 0 0 20px var(--color-primary-accent);
+	transform: translateY(-10px);
+}
+
+.project__image {
+	width: 100%;
+	height: auto;
+	border-radius: 10px 10px 0 0;
+	object-fit: cover;
+}
+
+.project__information {
+	padding: 0 var(--spacing-sm);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.project__information h3 {
+	text-align: center;
+	font-size: var(--font-size-md);
+	margin-bottom: 0;
+}
+
+.project__information p {
+	width: 90%;
+	text-align: justify;
+	font-size: var(--font-size-sm);
+	margin-bottom: 0;
+}
+
+.project__tools {
+	width: 90%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+}
+
+.project__tech-list {
+	width: 100%;
+	padding: var(--spacing-xs) 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: var(--spacing-md);
+}
+
+.icon-project-technology {
+	font-size: var(--font-size-icon-md);
+	color: var(--color-text-dark);
+}
+
+.project__access {
+	margin-top: var(--spacing-sm);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: var(--spacing-xl);
+	justify-content: center;
+}
+
+.project__access a {
+	font-size: var(--font-size-base);
+	color: var(--color-background-light);
+	background-color: var(--color-text-dark);
+	border: 1px solid var(--color-background-light);
+	border-radius: 5px;
+	transition: all 0.25s ease;
+}
+
+.project__access a:hover {
+	color: var(--color-background-light);
+	background-color: var(--color-primary-accent);
+	border-color: var(--color-primary-accent);
+	box-shadow: 0 0 20px var(--color-dark-translucent-30);
+	transform: translateY(2px);
+}
+
+/*
+   ==========================================================================
+   Seção de Formação (Courses)
+   ==========================================================================
+*/
+#section--courses {
+	width: 100%;
+	padding: var(--spacing-md);
+}
+
+#courses__items {
+	width: 80%;
+	padding: var(--spacing-sm);
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacing-md);
+	align-items: center;
+	justify-items: center;
+}
+
+/* Item individual de curso/formação */
+.course-item {
+	width: 80%;
+	min-width: 180px;
+	padding: var(--spacing-md);
+	color: var(--color-text-light);
+	background-color: var(--color-background-dark);
+	border: 1px solid var(--color-text-light);
+	border-radius: 8px;
+	transition: all 0.3s ease;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/* gap: var(--spacing-xs); */
+}
+
+.higher-education {
+	grid-column: span 2;
+}
+
+.normal-course {
+	grid-column: span 1;
+}
+
+.course-item h5 {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 0;
+}
+
+.course-item h4 {
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bolder);
+	margin-bottom: var(--spacing-xs);
+}
+
+.course-item p {
+	font-size: var(--font-size-sm);
+	margin-bottom: 0;
+}

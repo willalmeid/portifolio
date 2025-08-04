@@ -1,5 +1,6 @@
 [
 	{
+		"type": "higher-education",
 		"titration": "Bacharelado",
 		"name": "Sistemas de Informação",
 		"institution": "Universidade Estadual do Sul da Bahia",
@@ -8,14 +9,7 @@
 		"end_date": "Concluindo"
 	},
 	{
-		"titration": "Técnico",
-		"name": "Informática",
-		"institution": "Instituto Federal da Bahia",
-		"campus": "Campus Jequié",
-		"start_date": "2020",
-		"end_date": "2023"
-	},
-	{
+		"type": "normal-course",
 		"titration": "Curso",
 		"name": "HTML5 e CSS3",
 		"institution": "Curso em Video",
@@ -24,11 +18,21 @@
 		"end_date": "2024"
 	},
 	{
+		"type": "normal-course",
 		"titration": "Curso",
 		"name": "Java Script",
 		"institution": "Curso em Video",
 		"campus": "",
 		"start_date": "40h",
 		"end_date": "2025"
+	},
+	{
+		"type": "higher-education",
+		"titration": "Técnico",
+		"name": "Informática",
+		"institution": "Instituto Federal da Bahia",
+		"campus": "Campus Jequié",
+		"start_date": "2020",
+		"end_date": "2023"
 	}
 ]

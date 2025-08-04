@@ -1,0 +1,35 @@
+/*
+   ==========================================================================
+   Componentes: Botões
+   Estilos para os componentes de botão reutilizáveis.
+   ==========================================================================
+*/
+
+.button {
+	padding: var(--spacing-sm) var(--spacing-lg); /* 16px 32px */
+	text-align: center;
+	text-decoration: none;
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bold);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease; /* Transição geral para todos os botões */
+
+	display: inline-flex; /* Para alinhar melhor o conteúdo */
+	align-items: center;
+	justify-content: center;
+}
+
+.button--primary {
+	color: var(--color-background-dark);
+	background-color: var(--color-text-dark);
+	border: 1px solid var(--color-background-dark); /* Borda inicial */
+}
+
+.button--primary:hover {
+	color: var(--color-background-dark);
+	background-color: var(--color-primary-accent);
+	border-color: var(--color-primary-accent);
+	transform: translateY(3px);
+	filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+}

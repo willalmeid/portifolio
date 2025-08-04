@@ -1,0 +1,335 @@
+/* _home.css */
+
+/* Hero Banner Section */
+.hero-banner {
+	width: 100%;
+	height: calc(100vh - 60px); /* 60px é a altura do header */
+	padding: 6%;
+	padding-bottom: var(--spacing-md); /* 30px */
+	color: var(--color-text-light);
+	background-color: var(--color-background-dark);
+	position: relative;
+	scroll-margin-top: 60px; /* offset para rolagem suave */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-2xl); /* 100px */
+}
+
+.hero-banner__container {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-banner__image {
+	width: 42%; /* Pode ser um max-width com flex-grow para responsividade */
+}
+
+.hero-banner__image img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	animation: avatar-bounce 1.5s ease-in forwards infinite alternate-reverse;
+}
+
+.hero-banner__content {
+	width: 50%; /* Pode ser um max-width com flex-grow para responsividade */
+	padding: var(--spacing-md); /* 20px */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-xl); /* 50px */
+}
+
+.hero-banner__titles {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-banner__titles h1 {
+	font-size: var(--font-size-6xl);
+	font-weight: var(--font-weight-bold);
+	/* A cor já é herdada de --color-text-light do hero-banner */
+}
+
+/* Renomeado para text-highlight no HTML e aqui */
+.hero-banner__titles .text-highlight {
+	font-size: var(--font-size-7xl);
+	font-weight: var(--font-weight-bolder);
+	color: var(--color-text-dark); /* Esta cor sobrescreve o herdado do hero-banner, é intencional? */
+	/* Se a intenção é que ele seja a cor de destaque aqui no banner escuro, então deve ser: */
+	color: var(--color-primary-accent); /* OU ajustar se for para ser a cor de destaque SEMPRE */
+}
+
+.hero-banner__titles .text-highlight:hover {
+	color: var(--color-primary-accent); /* Mantido, mas reavaliar se a cor acima mudar */
+	filter: drop-shadow(0px 0px 10px var(--color-light-translucent-30)); /* Usar variável de transparente */
+}
+
+.hero-banner__specialization {
+	font-size: var(--font-size-4xl);
+	font-weight: var(--font-weight-bold);
+}
+
+.hero-banner__specialization .text-highlight {
+	font-size: var(--font-size-5xl);
+}
+
+/* About Me section */
+.about-me {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md); /* 20px */
+}
+
+.about-me p {
+	/* text-align: justify; */ /* Comentado, nem sempre é ideal para web */
+	font-size: var(--font-size-xl);
+	line-height: 1.5;
+}
+
+.about-me__call-to-action {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-dark); /* Esta cor sobrescreve o herdado, se for intencional */
+	animation: call-to-action 1.5s infinite alternate-reverse;
+}
+
+/* Social Links no Banner */
+.hero-banner__social-links {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--spacing-xl); /* 50px */
+}
+
+.hero-banner__social-links i {
+	color: var(--color-text-dark); /* Cor dos ícones */
+	font-size: var(--font-size-icon-md);
+	transition: all 0.3s ease;
+}
+
+.hero-banner__social-links i:hover {
+	color: var(--color-primary-accent);
+	transform: translateY(3px);
+	filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30)); /* Usar variável de transparente */
+}
+
+/* Arrow Down */
+#arrow-down {
+	color: var(--color-text-dark); /* Cor da seta */
+	font-size: var(--font-size-6xl);
+	animation: arrow-bounce 1s ease-in-out alternate infinite;
+	position: absolute;
+	bottom: var(--spacing-md); /* 30px */
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Sections for dynamic content */
+#section--tools-technology #tools-technology__items {
+	width: 85%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Mais responsivo */
+	gap: var(--spacing-md); /* 20px */
+	justify-items: center; /* Centraliza os itens no grid */
+	padding: var(--spacing-sm); /* Padding interno para o grid */
+}
+
+/* Item individual de ferramenta */
+.tool {
+	width: 250px; /* Considerar max-width ou width: 100% com max-width para responsividade */
+	padding: var(--spacing-md); /* 20px */
+	border: 1px solid var(--color-background-dark);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--spacing-xl); /* 30px */
+	transition: all 0.3s ease; /* Adicionar transição para o hover */
+}
+
+.tool:hover {
+	box-shadow: 0 0 15px var(--color-primary-accent);
+	transform: translateY(-5px);
+}
+
+.tool i {
+	font-size: var(--font-size-icon-lg);
+	color: var(--color-primary-accent); /* Exemplo: dar cor de destaque ao ícone da ferramenta */
+}
+
+.tool p {
+	text-align: center;
+	font-size: var(--font-size-sm);
+	margin-bottom: 0; /* Remover margin-bottom padrão de parágrafo aqui */
+}
+
+/* Projects Section */
+#section--projects #project__items {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mais responsivo */
+	align-items: start; /* Alinha os itens ao topo do seu container */
+	justify-content: center;
+	gap: var(--spacing-md); /* 20px */
+	padding: var(--spacing-sm); /* Padding interno para o grid */
+}
+
+/* Item individual de projeto */
+.project {
+	width: 400px; /* Considerar max-width ou width: 100% com max-width para responsividade */
+	padding-bottom: var(--spacing-md); /* 20px */
+	border: 1px solid var(--color-background-dark);
+	border-radius: 10px;
+	transition: all 0.5s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-lg); /* 35px */
+	overflow: hidden; /* Garante que a imagem com border-radius não "vaze" */
+}
+
+.project:hover {
+	box-shadow: 0 0 20px var(--color-primary-accent);
+	transform: translateY(-10px);
+}
+
+.project__image {
+	width: 100%; /* Garante que a imagem preencha o container */
+	height: auto;
+	border-radius: 10px 10px 0 0; /* Apenas os cantos superiores */
+	object-fit: cover; /* Para garantir que a imagem não distorça */
+}
+
+.project__information {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-sm); /* 15px */
+	padding: 0 var(--spacing-sm); /* Padding lateral para o texto */
+}
+
+.project__information h3 {
+	text-align: center;
+	font-size: var(--font-size-md);
+	margin-bottom: 0;
+}
+
+.project__information p {
+	width: 90%; /* Ajustado para 90% para evitar largura fixa */
+	text-align: justify;
+	font-size: var(--font-size-sm);
+	margin-bottom: 0;
+}
+
+.project__tools {
+	width: 90%; /* Ajustado para 90% */
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs); /* 10px */
+}
+
+.project__tech-list {
+	width: 100%;
+	padding: var(--spacing-xs) 0; /* 10px 0 */
+	list-style-type: none; /* Já no reset, mas reforçado */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap; /* Permite que os ícones quebrem linha em telas menores */
+	gap: var(--spacing-md); /* 20px */
+}
+
+.icon-project-technology {
+	font-size: var(--font-size-icon-md);
+	color: var(--color-text-dark); /* Cor padrão, pode ser sobrescrita pelo JS se houver cor específica da tecnologia */
+}
+
+.project__access {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; /* Para responsividade */
+	gap: var(--spacing-xl); /* 50px */
+	justify-content: center;
+	margin-top: var(--spacing-sm); /* Um pequeno espaçamento acima dos botões */
+}
+
+.project__access a {
+	/* Herda estilos de .button ou define os próprios */
+	padding: var(--spacing-md) var(--spacing-xl); /* 15px 30px */
+	color: var(--color-background-light);
+	background-color: var(--color-text-dark);
+	border: 1px solid var(--color-background-light);
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all 0.25s ease; /* Transição de hover mais específica */
+}
+
+.project__access a:hover {
+	color: var(--color-background-light); /* manter cor clara no hover */
+	background-color: var(--color-primary-accent);
+	border-color: var(--color-primary-accent);
+	box-shadow: 0 0 20px var(--color-dark-translucent-30);
+	transform: translateY(2px);
+}
+
+/* Training (Courses) Section */
+#section--courses {
+	/* RENOMEADO */
+	padding: var(--spacing-md); /* 20px */
+	width: 100%; /* Garante que a seção ocupe a largura total */
+}
+
+#courses__items {
+	/* RENOMEADO */
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mais responsivo e dinâmico */
+	gap: var(--spacing-md); /* 20px */
+	justify-items: center; /* Centraliza os itens no grid */
+	padding: var(--spacing-sm); /* Padding interno para o grid */
+}
+
+/* Item individual de curso/formação */
+.course-item {
+	/* RENOMEADO de .training para .course-item */
+	min-width: 180px;
+	padding: var(--spacing-md); /* 20px */
+	color: var(--color-text-light);
+	background-color: var(--color-background-dark);
+	border: 1px solid var(--color-text-light);
+	border-radius: 8px; /* Adicionado border-radius para consistência */
+	transition: all 0.3s ease; /* Adicionar transição para o hover */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: var(--spacing-xs); /* 10px */
+}
+
+.course-item:hover {
+	box-shadow: 0 0 15px var(--color-primary-accent);
+	transform: translateY(-5px);
+}
+
+.course-item h5 {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 0;
+}
+
+.course-item h4 {
+	margin-bottom: var(--spacing-xs); /* Pequeno espaçamento abaixo do h4 */
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bolder);
+}
+
+.course-item p {
+	font-size: var(--font-size-sm);
+	margin-bottom: 0; /* Remover margin-bottom padrão de parágrafo aqui */
+}

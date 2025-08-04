@@ -4,93 +4,112 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfólio - William Almeida</title>
-		<link rel="shortcut icon" href="/images/logo/logo-text-white-fundo-cut-radius.ico" type="image/x-icon" />
 
-		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="icon" href="assets/images/branding/logo-text-white-fundo-cut-radius.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/styles/main.css" />
+
+		<script src="https://kit.fontawesome.com/67debcb109.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<div class="banner-development">
-			<span>Projeto Em desenvolvimento</span>
+		<div class="banner-development" role="status" aria-live="polite">
+			<span>Projeto Em Desenvolvimento</span>
 		</div>
 
 		<header class="header">
-			<nav>
+			<nav class="header__nav" aria-label="Navegação Principal">
 				<ul>
-					<li class="nav-item active"><a href="#banner">Home</a></li>
-					<li class="nav-item"><a href="#section--tools-technology">Tolls</a></li>
-					<li class="nav-item"><a href="#section--projects">Projects</a></li>
-					<li class="nav-item"><a href="#section--training">Training</a></li>
+					<li class="nav-item active">
+						<a href="#banner" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#section--tools-technology" class="nav-link">Ferramentas</a>
+					</li>
+					<li class="nav-item">
+						<a href="#section--projects" class="nav-link">Projetos</a>
+					</li>
+					<li class="nav-item">
+						<a href="#section--courses" class="nav-link">Formação</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<main class="main">
-			<section id="banner">
-				<section class="banner__container">
-					<div class="banner__image">
-						<img id="imagem-pessoal" src="/images/imagem-pessoal.png" alt="imagem minha" />
+			<section id="banner" class="hero-banner">
+				<div class="hero-banner__container">
+					<div class="hero-banner__image">
+						<img src="assets/images/profile/avatar.png" alt="William Almeida, desenvolvedor front-end" />
 					</div>
 
-					<div class="banner__content">
-						<div class="banner__titles">
-							<h1>Olá, sou o <span class="highlight-title">William Almeida</span>.</h1>
-
-							<p class="specialization">
-								<span class="highlight-title">Front-End</span>
+					<div class="hero-banner__content">
+						<div class="hero-banner__titles">
+							<h1>
+								Olá, sou o
+								<span class="text-highlight">William Almeida</span>.
+							</h1>
+							<p class="hero-banner__specialization">
+								<span class="text-highlight">Front-End</span>
 								Development
 							</p>
 						</div>
 
 						<div class="about-me">
-							<p>Aos 20 anos, crio interfaces web <strong>inovadoras</strong> que se destacam e <strong>transformam a experiência</strong> online.</p>
-
 							<p>
-								Minha dedicação vai além do código: construo soluções front-end <strong>intuitivas e impecáveis</strong>, projetadas para
-								<strong>conectar profundamente</strong>
-								com quem as usa.
+								Aos 20 anos, crio interfaces web
+								<strong>inovadoras</strong> que se destacam e <strong>transformam a experiência</strong> online.
 							</p>
-
-							<p class="call-to-action">Vamos construir algo incrível juntos?</p>
+							<p>
+								Minha dedicação vai além do código: construo soluções front-end
+								<strong>intuitivas e impecáveis</strong>, projetadas para <strong>conectar profundamente</strong> com quem as usa.
+							</p>
+							<p class="about-me__call-to-action">Vamos construir algo incrível juntos?</p>
 						</div>
 
 						<a
-							class="button button--resume"
+							class="button button--primary"
 							href="https://www.canva.com/design/DAGuAkKMRXY/cqwcDxXe5RkMB9TxMdRR7Q/view?utm_content=DAGuAkKMRXY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc2feee33dd"
 							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Ver Currículo de William Almeida"
 							>Currículo</a
 						>
 
-						<div class="banner__social-links">
-							<a href="https://github.com/willalmeid" target="_blank"><i class="fa-brands fa-github"></i></a>
-							<a href="https://www.linkedin.com/in/william-almeida-74ab22302/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+						<div class="hero-banner__social-links">
+							<a href="https://github.com/willalmeid" target="_blank" rel="noopener noreferrer" aria-label="Perfil do GitHub de William Almeida"
+								><i class="fa-brands fa-github"></i
+							></a>
+							<a
+								href="https://www.linkedin.com/in/william-almeida-74ab22302/"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Perfil do LinkedIn de William Almeida"
+								><i class="fa-brands fa-linkedin"></i
+							></a>
 						</div>
 					</div>
-				</section>
+				</div>
 
-				<i id="arrow-down" class="fa-solid fa-caret-down"></i>
+				<i id="arrow-down" class="fa-solid fa-caret-down" aria-hidden="true"></i>
 			</section>
 
 			<section class="section" id="section--tools-technology">
 				<h2 class="section__title">Ferramentas e Tecnologias</h2>
-
-				<div id="tools-technology__items">
-					<!-- Construído Dinamicamente -->
+				<div id="tools-technology__items" class="tools-technology__grid">
+					<!-- Carregando Ferramentas e Tecnologias Dinamicamente... -->
 				</div>
 			</section>
 
 			<section class="section" id="section--projects">
 				<h2 class="section__title">Projetos</h2>
-
-				<div id="project__items">
-					<!-- Construído Dinamicamente -->
+				<div id="project__items" class="projects__grid">
+					<!-- Carregando Projetos Dinamicamente... -->
 				</div>
 			</section>
 
-			<section class="section" id="section--training">
+			<section class="section" id="section--courses">
 				<h2 class="section__title">Formação</h2>
-
-				<div id="training__items">
-					<!-- Construído Dinamicamente -->
+				<div id="courses__items" class="courses__grid">
+					<!-- Carregando Formação Dinamicamente... -->
 				</div>
 			</section>
 		</main>
@@ -101,23 +120,27 @@
 					<p class="footer__tagline">
 						Buscando parceiros para inovar?
 						<br />
-						<strong>Aguardo seu contato para fazermos a diferença</strong>
-						.
+						<strong>Aguardo seu contato para fazermos a diferença</strong>.
 					</p>
 
 					<ul class="footer__social-icons">
 						<li>
-							<a href="https://github.com/willalmeid" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+							<a href="https://github.com/willalmeid" target="_blank" rel="noopener noreferrer" aria-label="Perfil do GitHub">
 								<i class="fa-brands fa-github"></i>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/in/william-almeida-74ab22302/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+							<a href="https://www.linkedin.com/in/william-almeida-74ab22302/" target="_blank" rel="noopener noreferrer" aria-label="Perfil do LinkedIn">
 								<i class="fa-brands fa-linkedin"></i>
 							</a>
 						</li>
 						<li>
-							<a href="" target="_blank" rel="noopener noreferrer" aria-label="Download Currículo">
+							<a
+								href="https://www.canva.com/design/DAGuAkKMRXY/cqwcDxXe5RkMB9TxMdRR7Q/view?utm_content=DAGuAkKMRXY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc2feee33dd"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Download do Currículo"
+							>
 								<i class="fa-solid fa-address-book"></i>
 							</a>
 						</li>
@@ -125,7 +148,7 @@
 				</div>
 
 				<div class="footer__branding">
-					<img src="/images/logo/logo-text-white-cut.png" alt="Logo" class="footer__logo" />
+					<img src="assets/images/branding/logo-text-white-cut.png" alt="Logo de William Almeida" class="footer__logo" />
 				</div>
 
 				<div class="footer__contact-links">
@@ -133,7 +156,6 @@
 						<i class="fa-brands fa-whatsapp"></i>
 						<p>Ligue-me!</p>
 					</a>
-
 					<a href="mailto:almeida.willia0208@gmail.com" class="footer__contact-item">
 						<i class="fa-regular fa-envelope"></i>
 						<p>Mande email</p>
@@ -146,8 +168,7 @@
 			</div>
 		</footer>
 
-		<script src="https://kit.fontawesome.com/67debcb109.js" crossorigin="anonymous"></script>
+		<script src="assets/js/main.js" type="module"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
-		<script src="/js/script.js"></script>
 	</body>
 </html>

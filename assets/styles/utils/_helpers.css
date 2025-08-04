@@ -1,0 +1,30 @@
+/*
+   ==========================================================================
+   Utilidades: Classes Auxiliares e Funcionalidades
+   Classes pequenas e específicas para utilidades gerais.
+   ==========================================================================
+*/
+
+/* --- Banner de Desenvolvimento --- */
+.banner-development {
+	width: 100%;
+	padding: var(--spacing-xs) 0; /* 8px 0 */
+	text-align: center;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-background-dark);
+	background-color: var(--color-primary-accent);
+	position: absolute;
+	top: 0;
+	z-index: 1000; /* Alto z-index para garantir que fique por cima */
+	display: none; /* Mantido como none, para ser controlado via JS se necessário */
+}
+
+/* Placeholder para conteúdo dinâmico */
+.placeholder-content {
+	text-align: center;
+	font-size: var(--font-size-md);
+	color: var(--color-text-dark);
+	opacity: 0.7;
+	padding: var(--spacing-lg);
+}

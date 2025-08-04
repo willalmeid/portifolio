@@ -1,0 +1,42 @@
+/* 
+==========================================================================
+   Base: Reset CSS
+   Remove estilos padrão do navegador para consistência.
+   ==========================================================================
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: clip; /* Evita rolagem horizontal indesejada */
+	scroll-behavior: smooth;
+}
+
+/* Remover estilos padrão de listas */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Remover sublinhado de links e herdar cor */
+a {
+	text-decoration: none;
+	color: inherit; /* Links herdam a cor do pai por padrão */
+}
+
+/* Reset de elementos de imagem */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block; /* Remove o espaço extra abaixo da imagem */
+}
+
+/* Base de acessibilidade para formulários */
+button {
+	cursor: pointer;
+}
