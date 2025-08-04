@@ -4,6 +4,7 @@
    Remove estilos padrão do navegador para consistência.
    ==========================================================================
 */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -13,30 +14,26 @@
 html,
 body {
 	width: 100%;
-	overflow-x: clip; /* Evita rolagem horizontal indesejada */
+	overflow-x: clip;
 	scroll-behavior: smooth;
 }
 
-/* Remover estilos padrão de listas */
 ul,
 ol {
 	list-style: none;
 }
 
-/* Remover sublinhado de links e herdar cor */
 a {
 	text-decoration: none;
-	color: inherit; /* Links herdam a cor do pai por padrão */
+	color: inherit;
 }
 
-/* Reset de elementos de imagem */
 img {
 	max-width: 100%;
 	height: auto;
-	display: block; /* Remove o espaço extra abaixo da imagem */
+	display: block;
 }
 
-/* Base de acessibilidade para formulários */
 button {
 	cursor: pointer;
 }

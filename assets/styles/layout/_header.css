@@ -6,12 +6,14 @@
 */
 
 .header {
+	position: sticky;
+	top: 0;
+
 	width: 100%;
 	height: 60px;
 	background-color: var(--color-background-dark);
-	position: sticky;
-	top: 0;
-	z-index: 100; /* z-index maior que o main, menor que o banner-development */
+	z-index: 100;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -20,40 +22,40 @@
 
 .header__nav ul {
 	width: 100%;
-	list-style: none;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: var(--spacing-2xl); /* 64px, ajuste para o espaçamento desejado */
+	gap: var(--spacing-2xl); /* 64px */
 }
 
 .header__nav .nav-item {
-	transition: color 0.2s ease; /* Manter a transição para a mudança de cor do .active */
+	transition: color 0.2s ease;
 }
 
 .header__nav .nav-link {
-	text-decoration: none;
-	font-size: var(--font-size-md); /* Definir um tamanho base para links de navegação */
+	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-bolder);
-	color: var(--color-text-dark); /* Cor padrão dos links da nav (inativo) */
+	color: var(--color-text-dark);
 	position: relative;
 }
 
 .header__nav .nav-link::before {
-	height: 2px;
-	background-color: var(--color-primary-accent);
+	content: '';
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	content: '';
+
 	width: 0%;
-	transition: width 0.3s ease; /* Manter a transição para a linha do .active */
+	height: 2px;
+	background-color: var(--color-primary-accent);
+	transition: width 0.3s ease;
 }
 
 .header__nav .nav-item.active .nav-link {
-	color: var(--color-text-light); /* Cor do texto para a seção ativa */
+	color: var(--color-text-light);
 }
 
 .header__nav .nav-item.active .nav-link::before {
-	width: 100%; /* Linha inferior aparece para a seção ativa */
+	width: 100%;
 }

@@ -30,7 +30,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--spacing-2xl); /* 100px */
+	gap: var(--spacing-2xl); /* 64px */
 }
 
 .hero-banner__container {
@@ -96,7 +96,7 @@
 }
 
 .hero-banner__content .button {
-	padding: var(--spacing-sm) var(--spacing-2xl);
+	padding: var(--spacing-sm) var(--spacing-2xl); /* 16px e 64px */
 }
 
 .hero-banner__social-links {
@@ -120,13 +120,13 @@
 
 /* --- Seta para Baixo --- */
 #arrow-down {
-	font-size: var(--font-size-6xl);
-	color: var(--color-text-dark);
-
 	position: absolute;
 	bottom: var(--spacing-md); /* 30px */
 	left: 50%;
 	transform: translateX(-50%);
+
+	font-size: var(--font-size-6xl);
+	color: var(--color-text-dark);
 }
 
 .about-me {
@@ -156,18 +156,18 @@
 #tools-technology__items {
 	width: 90%;
 	max-width: 1400px;
-	padding: var(--spacing-md);
+	padding: var(--spacing-md); /* 24px */
 
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-items: center;
 	align-items: stretch;
-	gap: var(--spacing-md);
+	gap: var(--spacing-md); /* 24px */
 }
 
 .tool {
 	min-height: 220px;
-	padding: var(--spacing-md);
+	padding: var(--spacing-md); /* 24px */
 	text-align: center;
 	background-color: var(--color-background-light);
 	border: 1px solid var(--color-accent-translucent-30);
@@ -182,12 +182,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	gap: var(--spacing-sm);
+	gap: var(--spacing-sm); /* 16px */
 }
 
 .tool:hover {
-	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 	background-color: #f9f9f9;
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 	transform: translateY(-8px) scale(1.02);
 }
 
@@ -202,7 +202,7 @@
 }
 
 .tool h4 {
-	margin-bottom: var(--spacing-xs);
+	margin-bottom: var(--spacing-xs); /* 16px */
 	font-size: var(--font-size-lg);
 	color: var(--color-background-dark);
 }
@@ -219,7 +219,7 @@
 .tool__proficiency {
 	width: 80%;
 	height: 8px;
-	margin-top: var(--spacing-sm);
+	margin-top: var(--spacing-sm); /* 16px */
 	background-color: var(--color-accent-translucent-30);
 	border-radius: 4px;
 	position: relative;
@@ -254,25 +254,24 @@
 	z-index: 10;
 }
 
-/* Bico do balão (agora relativo ao centro do próprio balão) */
+/* Bico do balão */
 .tool__proficiency-value::after {
 	content: '';
 	position: absolute;
 	left: 50%;
-	bottom: -6px; /* Posição abaixo do balão, um pouco mais para garantir que cubra */
+	bottom: -6px;
 	transform: translateX(-50%) rotate(45deg);
 
-	width: 10px; /* Um pouco maior */
-	height: 10px; /* Um pouco maior */
+	width: 10px;
+	height: 10px;
 	background-color: var(--color-primary-accent);
 	border-bottom-right-radius: 3px;
 	z-index: -1;
 }
 
-/* Mostrar o valor da porcentagem no hover do .tool */
 .tool:hover .tool__proficiency-value {
 	opacity: 1;
-	transform: translateY(-3px); /* Ajuste: para subir um pouco mais se a barra já estiver no lugar */
+	transform: translateY(-3px);
 }
 
 /*
@@ -281,85 +280,83 @@
    ==========================================================================
 */
 #section--projects {
-	position: relative; /* Para garantir que as animações de entrada funcionem bem */
+	position: relative;
 }
 
 #project__items {
 	width: 90%;
 	max-width: 1400px;
-	padding: var(--spacing-md);
+	padding: var(--spacing-md); /* 24px */
+
 	display: grid;
-	/* Grid mais flexível: minmax(300px, 1fr) permite cards maiores em telas grandes, e 2 ou 1 coluna em mobile */
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: var(--spacing-lg); /* Aumentar o gap entre os cards */
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacing-lg); /* 32px */
 	justify-items: center;
-	align-items: stretch; /* Garante que todos os cards tenham a mesma altura, útil para grids */
+	align-items: stretch;
 }
 
-/* Item individual de projeto */
 .project {
-	width: 100%; /* Ocupa a largura total da coluna do grid */
-	background-color: var(--color-background-light); /* Fundo branco para o card */
+	width: 100%;
+	min-height: 420px;
+	background-color: var(--color-background-light);
 	border: 1px solid var(--color-border-subtle);
-	border-radius: 8px; /* Cantos arredondados */
-	/* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); Sombra mais destacada */
-	overflow: hidden; /* Importante para o border-radius da imagem */
+	border-radius: 8px;
+	overflow: hidden;
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--spacing-md); /* Reduzi um pouco o gap interno */
-	transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transições mais suaves e focadas */
-	/* cursor: pointer; Indica interatividade */
-	min-height: 420px; /* Garante uma altura mínima para uniformidade */
+	gap: var(--spacing-md);
 }
 
-/* Efeito Hover nos Cards */
 .project:hover {
-	transform: scale(1.1); /* Elevação e zoom mais pronunciados */
-	box-shadow: 0 0px 35px var(--color-primary-accent); /* Sombra mais intensa */
-	border-color: var(--color-primary-accent); /* Borda com cor de destaque no hover */
+	transform: scale(1.1);
+	box-shadow: 0 0px 35px var(--color-primary-accent);
+	border-color: var(--color-primary-accent);
 }
 
 .project__image {
 	width: 100%;
-	height: 220px; /* Altura fixa para as imagens, para uniformidade visual */
-	object-fit: cover; /* Recorta a imagem para cobrir a área mantendo a proporção */
-	border-radius: 8px 8px 0 0; /* Cantos arredondados apenas no topo */
-	transition: transform 0.3s ease; /* Transição para zoom na imagem no hover */
+	height: 220px;
+	object-fit: cover;
+	border-radius: 8px 8px 0 0;
+	transition: transform 0.3s ease;
 }
 
 .project__information {
-	padding: 0 var(--spacing-md); /* Aumentei o padding lateral */
+	padding: 0 var(--spacing-md); /* 0 e 24px */
+	text-align: center;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: var(--spacing-sm);
-	text-align: center; /* Centraliza tudo no bloco de informação */
 }
 
 .project__information h3 {
-	font-size: var(--font-size-xl); /* Título do projeto um pouco maior */
+	margin-bottom: var(--spacing-xs); /* 8px */
+	font-size: var(--font-size-xl);
 	color: var(--color-background-dark);
-	margin-bottom: var(--spacing-xs); /* Espaço sutil abaixo do título */
-	font-weight: 600; /* Um pouco mais de peso */
+	font-weight: 600;
 }
 
 .project__information p {
-	width: 100%; /* Ocupa toda a largura do container */
-	text-align: center; /* Centraliza a descrição */
+	width: 100%;
+	margin-bottom: var(--spacing-sm); /* 16px */
+	text-align: center;
 	font-size: var(--font-size-sm);
-	color: #555; /* Cor um pouco mais suave para a descrição */
-	line-height: 1.6; /* Aumentar o espaçamento entre linhas */
-	margin-bottom: var(--spacing-sm);
-	flex-grow: 1; /* Garante que o parágrafo ocupe o espaço disponível, útil para align-items: stretch */
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	flex-grow: 1;
 }
 
 .project__tools {
 	width: 90%;
+	margin-top: auto;
+	padding-top: var(--spacing-sm); /* 16px */
 	text-align: center;
-	margin-top: auto; /* Empurra as ferramentas e acessos para o final do card */
-	padding-top: var(--spacing-sm); /* Espaço acima das ferramentas */
-	border-top: 1px solid var(--color-border-subtle); /* Linha divisória sutil */
+	border-top: 1px solid var(--color-border-subtle);
 
 	display: flex;
 	flex-direction: column;
@@ -367,20 +364,19 @@
 }
 
 .project__tools h4 {
+	margin-bottom: var(--spacing-sm); /* 16px */
 	font-size: var(--font-size-md);
 	color: var(--color-background-dark);
-	margin-bottom: var(--spacing-sm);
 }
 
 .project__tech-list {
 	width: 100%;
-	list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly; /* Centraliza os ícones */
-	gap: var(--spacing-md); /* Espaçamento entre os ícones */
 	margin: 0;
 	padding: 0;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 .icon-project-technology {
@@ -389,32 +385,30 @@
 }
 
 .project__access {
-	margin-top: var(--spacing-md); /* Mais espaço acima dos botões */
-	margin-bottom: var(--spacing-md); /* Espaço abaixo dos botões */
+	width: 90%;
+	margin-top: var(--spacing-md);
+	margin-bottom: var(--spacing-md);
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: var(--spacing-md); /* Reduzi o gap entre os botões para deixar mais compacto */
 	justify-content: center;
-	width: 90%; /* Limita a largura dos botões para não esticarem demais */
+	gap: var(--spacing-md); /* 24px */
 }
 
 .project__access a {
-	flex: 1; /* Permite que os botões se expandam, mas respeitem o gap */
-	min-width: 120px; /* Largura mínima para os botões */
-	max-width: 180px; /* Largura máxima para os botões */
-	padding: var(--spacing-sm) var(--spacing-md); /* Padding nos botões */
+	flex: 1;
+	min-width: 120px;
+	max-width: 180px;
+	padding: var(--spacing-sm) var(--spacing-md); /* 16px e 24px */
 	font-size: var(--font-size-base);
 	text-align: center;
-	text-decoration: none;
 	font-weight: 500;
-	border-radius: 8px; /* Cantos mais arredondados para os botões */
+	border-radius: 8px;
 	transition: all 0.3s ease;
-	cursor: pointer; /* Indicar clicável */
 	white-space: nowrap; /* Evita que o texto do botão quebre */
 }
 
-/* Estilo do botão padrão (background-dark e texto claro) */
 .project__access a.button {
 	color: var(--color-background-light);
 	background-color: var(--color-background-dark);
@@ -436,8 +430,8 @@
 /* Grid de Cursos */
 #courses__items {
 	width: 90%;
-	max-width: 1400px; /* Limite a largura para não esticar demais */
-	margin: 0 auto; /* Centraliza o grid */
+	max-width: 1400px;
+	margin: 0 auto;
 	padding: var(--spacing-md);
 
 	display: grid;
@@ -445,15 +439,13 @@
 	grid-auto-flow: dense;
 	align-items: stretch;
 	justify-items: stretch; /* Garante que os itens ocupem a largura total da coluna */
-	gap: var(--spacing-lg); /* Aumentar o espaçamento para um visual mais limpo */
+	gap: var(--spacing-lg); /* 32px */
 }
 
-/* Card Individual de Curso/Formação */
 .course-item {
 	width: 100%;
 	height: auto;
-	/* min-height: 120px; Aumentar a altura mínima para um visual mais robusto */
-	padding: var(--spacing-lg); /* Aumentar o padding interno */
+	padding: var(--spacing-lg); /* 32px */
 	color: var(--color-text-light);
 	background-color: var(--color-background-dark);
 	border: 1px solid var(--color-border-subtle);
@@ -470,12 +462,10 @@
 	margin: 0;
 }
 
-/* Tipos de Formação */
 .higher-education {
 	grid-column: span 2;
 }
 
-/* Ajustes de tipografia e espaçamento */
 .course-item h5 {
 	font-size: var(--font-size-base);
 	font-weight: var(--font-weight-bold);

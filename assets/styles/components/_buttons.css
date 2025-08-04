@@ -13,9 +13,9 @@
 	font-weight: var(--font-weight-bold);
 	border-radius: 5px;
 	cursor: pointer;
-	transition: all 0.3s ease; /* Transição geral para todos os botões */
+	transition: all 0.3s ease;
 
-	display: inline-flex; /* Para alinhar melhor o conteúdo */
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -23,7 +23,7 @@
 .button--primary {
 	color: var(--color-background-dark);
 	background-color: var(--color-text-dark);
-	border: 1px solid var(--color-background-dark); /* Borda inicial */
+	border: 1px solid var(--color-background-dark);
 }
 
 .button--primary:hover {

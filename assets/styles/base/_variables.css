@@ -6,17 +6,17 @@
 */
 :root {
 	/* Cores Semânticas */
-	--color-background-dark: #212121; /* Preto quase absoluto (para seções escuras, texto em destaque no escuro) */
-	--color-background-light: #f9f9f9; /* Branco suave para o background principal */
-	--color-text-dark: #424242; /* Cinza chumbo (para texto principal no fundo claro) */
-	--color-text-light: #fafafa; /* Branco puro (para texto em fundos escuros) */
-	--color-primary-accent: #8e24aa; /* Roxo médio/escuro vibrante (o seu destaque principal) */
+	--color-background-dark: #212121; /* Eerie black */
+	--color-background-light: #f9f9f9; /* Seasalt claro*/
+	--color-text-dark: #424242; /* Onyx */
+	--color-text-light: #fafafa; /* Seasalt escuro */
+	--color-primary-accent: #8e24aa; /* Mauveine */
 
 	/* Cores Detalhes */
-	--color-background-dark-translucent-05: rgb(33, 33, 33, 0.1);
-	--color-accent-translucent-30: rgba(142, 36, 170, 0.3); /* Roxo com 30% de opacidade */
-	--color-dark-translucent-30: rgba(66, 66, 66, 0.3); /* Cinza chumbo com 30% de opacidade */
-	--color-light-translucent-30: rgba(250, 250, 250, 0.3); /* Branco puro com 30% de opacidade */
+	--color-background-dark-translucent-10: rgb(33, 33, 33, 0.1);
+	--color-accent-translucent-30: rgba(142, 36, 170, 0.3); /* Mauveine com 30% de opacidade */
+	--color-dark-translucent-30: rgba(66, 66, 66, 0.3); /* Onyx com 30% de opacidade */
+	--color-light-translucent-30: rgba(250, 250, 250, 0.3); /* Seasalt escuro com 30% de opacidade */
 
 	/* Tipografia */
 	--font-family-base: 'Roboto', sans-serif;

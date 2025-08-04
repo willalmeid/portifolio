@@ -26,7 +26,7 @@ export function initScrollSpy() {
 		for (let i = sections.length - 1; i >= 0; i--) {
 			const section = sections[i];
 			if (section) {
-				const activationTriggerPoint = section.offsetTop - (headerHeight + 200); // Ajuste fino pode ser necessário
+				const activationTriggerPoint = section.offsetTop - (headerHeight + 200);
 				if (scrollPosition >= activationTriggerPoint) {
 					activeSectionIndex = i;
 					foundActive = true;

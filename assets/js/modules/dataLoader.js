@@ -17,7 +17,6 @@ export async function loadTools() {
 
 		tools.forEach(item => {
 			const toolDiv = document.createElement('div');
-			// AQUI: Remova 'fade-in-up'
 			toolDiv.classList.add('tool');
 
 			toolDiv.innerHTML = `
@@ -31,9 +30,6 @@ export async function loadTools() {
             `;
 			toolsContainer.appendChild(toolDiv);
 		});
-
-		// AQUI: Remova esta linha
-		// setupIntersectionObserver(toolsContainer);
 	} catch (error) {
 		console.error('Erro ao carregar as ferramentas: ', error);
 		toolsContainer.innerHTML = `<p class="placeholder-content">Não foi possível carregar as ferramentas. Por favor, tente novamente mais tarde.</p>`;

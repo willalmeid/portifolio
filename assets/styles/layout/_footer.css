@@ -7,9 +7,10 @@
 
 .footer {
 	width: 100%;
-	padding: var(--spacing-xl) 0 var(--spacing-xs); /* 50px 0 10px */
+	padding: var(--spacing-xl) 0 var(--spacing-xs); /* 50px 0 8px */
 	color: var(--color-text-light);
 	background-color: var(--color-background-dark);
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,11 +19,12 @@
 
 .footer__content {
 	width: 90%;
+
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: var(--spacing-md);
+	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
 	justify-items: center;
+	gap: var(--spacing-md); /* 24px */
 }
 
 .footer__intro {
@@ -48,11 +50,10 @@
 }
 
 .footer__social-icons {
-	list-style: none;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: var(--spacing-xl);
+	gap: var(--spacing-xl); /* 48px */
 }
 
 .footer__social-icons li a i {
@@ -71,7 +72,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--spacing-md);
+	gap: var(--spacing-md); /* 24px */
 }
 
 .footer__logo {
@@ -85,13 +86,14 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: var(--spacing-xl);
+	gap: var(--spacing-xl); /* 48px */
 }
 
 .footer__contact-item {
-	padding: var(--spacing-xl) var(--spacing-2xl);
+	width: 240px;
+	height: fit-content;
+	padding: var(--spacing-xl) var(--spacing-2xl); /* 48px e 64px */
 	text-align: center;
-	text-decoration: none;
 	font-size: var(--font-size-lg);
 	font-weight: var(--font-weight-regular);
 	color: var(--color-text-light);
@@ -99,16 +101,17 @@
 	border-top-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	box-shadow: 12px 12px 0px var(--color-primary-accent);
+	transition: transform 0.3s ease;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: var(--spacing-xs);
-	transition: transform 0.3s ease;
 }
 
 .footer__contact-item i {
 	font-size: var(--font-size-icon-md);
-	margin-bottom: var(--spacing-xs);
+	margin-bottom: var(--spacing-xs); /* 8px */
 }
 
 .footer__contact-item:hover {
@@ -116,13 +119,14 @@
 }
 
 .footer__copyright {
+	margin-top: var(--spacing-md); /* 24px */
 	font-size: var(--font-size-sm);
 	color: var(--color-text-light);
-	margin-top: var(--spacing-md);
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: var(--spacing-md);
+	gap: var(--spacing-md); /* 24px */
 }
 
 .footer__copyright img {

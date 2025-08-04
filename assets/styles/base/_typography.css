@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
 	line-height: 1.2;
-	margin-bottom: var(--spacing-sm); /* Espaçamento padrão para títulos */
+	margin-bottom: var(--spacing-sm);
 }
 
 h1 {
@@ -29,10 +29,9 @@ h3 {
 
 p {
 	line-height: 1.6;
-	margin-bottom: var(--spacing-sm); /* Espaçamento padrão para parágrafos */
+	margin-bottom: var(--spacing-sm);
 }
 
-/* Classe de destaque de texto (reaproveitável) */
 .text-highlight {
 	color: var(--color-primary-accent);
 	font-weight: var(--font-weight-bolder);
