@@ -9,7 +9,7 @@ export async function loadTools() {
 	}
 
 	try {
-		const response = await fetch('/assets/data/tools.json');
+		const response = await fetch('assets/data/tools.json');
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
@@ -47,7 +47,7 @@ export async function loadProjects() {
 	}
 
 	try {
-		const response = await fetch('/assets/data/projects.json');
+		const response = await fetch('assets/data/projects.json');
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
@@ -69,7 +69,7 @@ export async function loadProjects() {
 			}
 
 			projectDiv.innerHTML = `
-                <img class="project__image" src="/assets/images/projects/${item.image_path}" alt="imagem do projeto" />
+                <img class="project__image" src="assets/images/projects/${item.image_path}" alt="imagem do projeto" />
 
                 <div class="project__information">
                     <h3>${item.project_title}</h3>
@@ -107,7 +107,7 @@ export async function loadTraining() {
 	}
 
 	try {
-		const response = await fetch('/assets/data/courses.json');
+		const response = await fetch('assets/data/courses.json');
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);
 		}
