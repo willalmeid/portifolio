@@ -17,18 +17,26 @@ export async function loadTools() {
 
 		tools.forEach(item => {
 			const toolDiv = document.createElement('div');
+			// AQUI: Remova 'fade-in-up'
 			toolDiv.classList.add('tool');
 
 			toolDiv.innerHTML = `
-                <i class="${item.icon_class}" style="color: ${item.color};"></i>
+                <i class="${item.icon_class} tool__icon" style="color: ${item.color};"></i>
                 <h4>${item.name}</h4>
                 <p>${item.description}</p>
+                <div class="tool__proficiency">
+                    <div class="tool__proficiency-bar" style="width: ${item.proficiency}%;"></div>
+                    <span class="tool__proficiency-value">${item.proficiency}%</span>
+                </div>
             `;
 			toolsContainer.appendChild(toolDiv);
 		});
+
+		// AQUI: Remova esta linha
+		// setupIntersectionObserver(toolsContainer);
 	} catch (error) {
 		console.error('Erro ao carregar as ferramentas: ', error);
-		toolsContainer.innerHTML = `<p class="placeholder-content">Não foi possível carregar as ferramentas.</p>`;
+		toolsContainer.innerHTML = `<p class="placeholder-content">Não foi possível carregar as ferramentas. Por favor, tente novamente mais tarde.</p>`;
 	}
 }
 
@@ -88,7 +96,7 @@ export async function loadProjects() {
 		});
 	} catch (error) {
 		console.error('Erro ao carregar os projetos: ', error);
-		projectsContainer.innerHTML = `<p class="placeholder-content">Não foi possível carregar os projetos.</p>`;
+		projectsContainer.innerHTML = `<p class="placeholder-content">Não foi possível carregar os projetos. Por favor, tente novamente mais tarde.</p>`;
 	}
 }
 
@@ -109,17 +117,29 @@ export async function loadTraining() {
 		}
 		const trainingData = await response.json();
 
+		// Ordena os itens para garantir que o 'higher-education' venha primeiro
+		trainingData.sort((a, b) => {
+			if (a.type === 'higher-education') return -1;
+			if (b.type === 'higher-education') return 1;
+			return 0;
+		});
+
 		trainingData.forEach(item => {
 			const courseDiv = document.createElement('div');
 			courseDiv.classList.add('course-item');
 			courseDiv.classList.add(`${item.type}`);
 
+			const institutionAndCampus = item.campus ? `${item.institution} - ${item.campus}` : item.institution;
+
+			const dateRange = item.end_date ? `${item.start_date} - ${item.end_date}` : item.start_date;
+
 			courseDiv.innerHTML = `
-                <h5>${item.titration}</h5>
-                <h4>${item.name}</h4>
-                <p>${item.institution} - ${item.campus}</p>
-                <p>${item.start_date} - ${item.end_date}</p>
-            `;
+				<h5>${item.titration}</h5>
+				<h4>${item.name}</h4>
+				<p class="course-item__institution">${institutionAndCampus}</p>
+				<p class="course-item__date">${dateRange}</p>
+        	`;
+
 			coursesContainer.appendChild(courseDiv);
 		});
 	} catch (error) {

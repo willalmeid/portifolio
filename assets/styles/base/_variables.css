@@ -13,6 +13,7 @@
 	--color-primary-accent: #8e24aa; /* Roxo médio/escuro vibrante (o seu destaque principal) */
 
 	/* Cores Detalhes */
+	--color-background-dark-translucent-05: rgb(33, 33, 33, 0.1);
 	--color-accent-translucent-30: rgba(142, 36, 170, 0.3); /* Roxo com 30% de opacidade */
 	--color-dark-translucent-30: rgba(66, 66, 66, 0.3); /* Cinza chumbo com 30% de opacidade */
 	--color-light-translucent-30: rgba(250, 250, 250, 0.3); /* Branco puro com 30% de opacidade */

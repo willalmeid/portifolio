@@ -3,24 +3,42 @@
 		"name": "HTML",
 		"description": "Linguagem de marcação usada na construção de páginas Web, estruturando e apresentando conteúdo.",
 		"icon_class": "fa-brands fa-html5",
-		"color": "#e34f26"
+		"color": "#e34f26",
+		"proficiency": 95
 	},
 	{
 		"name": "CSS",
 		"description": "Aplicação utilizada na estilização de componentes escritos em linguagens de marcação.",
 		"icon_class": "fa-brands fa-css3-alt",
-		"color": "#1572b6"
+		"color": "#1572b6",
+		"proficiency": 90
 	},
 	{
 		"name": "JavaScript",
 		"description": "Aplicação utilizada no desenvolvimento de funcionalidades e interatividade em páginas da web.",
 		"icon_class": "fa-brands fa-js",
-		"color": "#f7df1e"
+		"color": "#f7df1e",
+		"proficiency": 85
 	},
 	{
 		"name": "Git",
 		"description": "Ferramenta utilizada no controle de versões, gerenciamento e colaboração em projetos de desenvolvimento de software.",
 		"icon_class": "fa-brands fa-git-alt",
-		"color": "#f1502f"
+		"color": "#f1502f",
+		"proficiency": 75
+	},
+	{
+		"name": "React",
+		"icon_class": "fa-brands fa-react",
+		"color": "#61DAFB",
+		"description": "Biblioteca JavaScript para construção de interfaces de usuário dinâmicas e escaláveis.",
+		"proficiency": 2
+	},
+	{
+		"name": "Node.js",
+		"icon_class": "fa-brands fa-node",
+		"color": "#339933",
+		"description": "Ambiente de execução JavaScript que permite construir aplicações de rede escaláveis e rápidas.",
+		"proficiency": 1
 	}
 ]

@@ -7,10 +7,14 @@
 
 /* --- Seção Genérica (Base para todas as seções) --- */
 .section {
-	max-width: 1440px;
-	min-height: 500px; /* Considere `min-height: fit-content` se o conteúdo variar muito */
-	margin-bottom: var(--spacing-2xl); /* 100px */
-	padding: var(--spacing-lg); /* Adicionado um padding padrão para seções */
+	width: 100%;
+	max-width: 1680px;
+	min-height: 500px;
+	margin: var(--spacing-xl);
+	padding: var(--spacing-2xl);
+	background-color: var(--color-background-dark-translucent-05);
+	border-radius: 8px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 	scroll-margin-top: 120px; /* Offset para rolagem suave para âncoras (ajustar conforme altura do header/banner) */
 
 	display: flex;
@@ -24,6 +28,6 @@
 	padding-bottom: var(--spacing-sm); /* 10px */
 	text-align: center;
 	font-size: var(--font-size-4xl);
-	color: var(--color-background-dark);
-	border-bottom: 2px solid var(--color-background-dark);
+	color: var(--color-text-dark);
+	border-bottom: 2px solid var(--color-primary-accent);
 }
