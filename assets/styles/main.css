@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Base Styles */
-@import url('./base/_variables.css');
+@import url('/assets/styles/base/_variables.css');
 @import url('./base/_reset.css');
 @import url('./base/_global.css');
 @import url('./base/_typography.css');
