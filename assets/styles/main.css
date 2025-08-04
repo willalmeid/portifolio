@@ -12,19 +12,19 @@
 
 /* Base Styles */
 @import url('/assets/styles/base/_variables.css');
-@import url('./base/_reset.css');
-@import url('./base/_global.css');
-@import url('./base/_typography.css');
+@import url('/assets/styles/base/_reset.css');
+@import url('/assets/styles/base/_global.css');
+@import url('/assets/styles/base/_typography.css');
 
 /* Layout Styles */
-@import url('./layout/_header.css');
-@import url('./layout/_main.css'); /* Agora contém as seções específicas */
-@import url('./layout/_footer.css'); /* NOVO: Arquivo dedicado ao footer */
+@import url('/assets/styles/layout/_header.css');
+@import url('/assets/styles/layout/_main.css'); /* Agora contém as seções específicas */
+@import url('/assets/styles/layout/_footer.css'); /* NOVO: Arquivo dedicado ao footer */
 
 /* Component Styles */
-@import url('./components/_buttons.css');
-@import url('./components/_sections.css'); /* Apenas as configurações genéricas de .section */
+@import url('/assets/styles/components/_buttons.css');
+@import url('/assets/styles/components/_sections.css'); /* Apenas as configurações genéricas de .section */
 
 /* Utility Styles */
-@import url('./utils/_animations.css');
-@import url('./utils/_helpers.css');
+@import url('/assets/styles/utils/_animations.css');
+@import url('/assets/styles/utils/_helpers.css');
