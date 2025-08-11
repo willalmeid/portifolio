@@ -24,6 +24,7 @@
 /* Component Styles */
 @import url('/assets/styles/components/_buttons.css');
 @import url('/assets/styles/components/_sections.css'); /* Apenas as configurações genéricas de .section */
+@import url('/assets/styles/components/_social-links.css');
 
 /* Utility Styles */
 @import url('/assets/styles/utils/_animations.css');

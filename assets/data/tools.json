@@ -18,14 +18,14 @@
 		"description": "Aplicação utilizada no desenvolvimento de funcionalidades e interatividade em páginas da web.",
 		"icon_class": "fa-brands fa-js",
 		"color": "#f7df1e",
-		"proficiency": 85
+		"proficiency": 45
 	},
 	{
 		"name": "Git",
 		"description": "Ferramenta utilizada no controle de versões, gerenciamento e colaboração em projetos de desenvolvimento de software.",
 		"icon_class": "fa-brands fa-git-alt",
 		"color": "#f1502f",
-		"proficiency": 75
+		"proficiency": 65
 	},
 	{
 		"name": "React",

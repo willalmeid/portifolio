@@ -6,7 +6,7 @@
 */
 
 .button {
-	padding: var(--spacing-sm) var(--spacing-lg); /* 16px 32px */
+	padding: var(--spacing-sm) var(--spacing-2xl); /* 16px 32px */
 	text-align: center;
 	text-decoration: none;
 	font-size: var(--font-size-lg);

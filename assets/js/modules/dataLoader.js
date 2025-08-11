@@ -21,7 +21,7 @@ export async function loadTools() {
 
 			toolDiv.innerHTML = `
                 <i class="${item.icon_class} tool__icon" style="color: ${item.color};"></i>
-                <h4>${item.name}</h4>
+                <h3>${item.name}</h3>
                 <p>${item.description}</p>
                 <div class="tool__proficiency">
                     <div class="tool__proficiency-bar" style="width: ${item.proficiency}%;"></div>
@@ -77,7 +77,7 @@ export async function loadProjects() {
                 </div>
 
                 <div class="project__tools">
-                    <h4>Tecnologias Utilizadas</h4>
+                    <h4>Principais Tecnologias Utilizadas</h4>
                     <ul class="project__tech-list">
                         ${techIconsHtml}
                     </ul>
@@ -130,7 +130,7 @@ export async function loadTraining() {
 			const dateRange = item.end_date ? `${item.start_date} - ${item.end_date}` : item.start_date;
 
 			courseDiv.innerHTML = `
-				<h5>${item.titration}</h5>
+				<span>${item.titration}</span>
 				<h4>${item.name}</h4>
 				<p class="course-item__institution">${institutionAndCampus}</p>
 				<p class="course-item__date">${dateRange}</p>

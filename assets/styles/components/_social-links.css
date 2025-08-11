@@ -1,0 +1,18 @@
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--spacing-xl); /* 48px */
+}
+
+.social-icons a i {
+	font-size: var(--font-size-icon-md);
+	color: var(--color-text-dark);
+	transition: all 0.3s ease;
+}
+
+.social-icons a i:hover {
+	color: var(--color-primary-accent);
+	transform: translateY(3px);
+	filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+}

@@ -12,11 +12,12 @@ h4,
 h5,
 h6 {
 	line-height: 1.2;
-	margin-bottom: var(--spacing-sm);
 }
 
 h1 {
-	font-size: var(--font-size-6xl);
+	font-size: var(--font-size-5xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-light);
 }
 
 h2 {
@@ -24,15 +25,33 @@ h2 {
 }
 
 h3 {
-	font-size: var(--font-size-xl);
+	margin-bottom: var(--spacing-xs);
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-background-dark);
+}
+
+h4 {
+	margin-bottom: var(--spacing-sm); /* 16px */
+	font-size: var(--font-size-sm);
+	color: var(--color-text-dark);
 }
 
 p {
-	line-height: 1.6;
 	margin-bottom: var(--spacing-sm);
+	font-size: var(--font-size-sm);
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	flex-grow: 1;
 }
 
 .text-highlight {
-	color: var(--color-primary-accent);
+	font-size: var(--font-size-6xl);
 	font-weight: var(--font-weight-bolder);
+	color: var(--color-text-dark);
+}
+
+.text-highlight:hover {
+	color: var(--color-primary-accent);
+	filter: drop-shadow(0px 0px 10px var(--color-light-translucent-30));
 }

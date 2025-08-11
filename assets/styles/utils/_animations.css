@@ -36,16 +36,3 @@
 		transform: translateY(5px);
 	}
 }
-
-/* Aplicação das animações aos elementos */
-.hero-banner__image img {
-	animation: avatar-bounce 1.5s ease-in forwards infinite alternate-reverse;
-}
-
-.about-me__call-to-action {
-	animation: call-to-action 1.5s infinite alternate-reverse;
-}
-
-#arrow-down {
-	animation: arrow-bounce 1s ease-in-out alternate infinite;
-}

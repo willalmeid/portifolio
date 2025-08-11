@@ -8,7 +8,6 @@
 .section {
 	width: 100%;
 	max-width: 1680px;
-	min-height: 500px;
 	margin: var(--spacing-xl); /* 50px */
 	padding: var(--spacing-2xl); /* 64px */
 	background-color: var(--color-light-translucent-30);

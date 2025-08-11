@@ -7,9 +7,9 @@
 
 html,
 body {
-	color: var(--color-text-dark);
-	background-color: var(--color-background-light);
 	font-family: var(--font-family-base);
 	font-size: 16px;
 	font-weight: var(--font-weight-regular);
+	color: var(--color-text-dark);
+	background-color: var(--color-background-light);
 }
