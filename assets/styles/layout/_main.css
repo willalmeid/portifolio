@@ -61,6 +61,7 @@
 }
 
 .hero-banner__titles {
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -168,7 +169,7 @@
 
 .tool__icon {
 	margin-bottom: var(--spacing-xs);
-	font-size: var(--font-size-icon-lg);
+	font-size: var(--font-size-icon-xl);
 	transition: transform 0.3s ease;
 }
 

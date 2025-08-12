@@ -1,0 +1,158 @@
+/*
+    ==========================================================================
+    Layout: Rodapé - Media Queries
+    Estilos responsivos para o rodapé.
+    ==========================================================================
+*/
+
+/* Desktop extra-grande (até 1535px) */
+@media (max-width: 1535px) {
+	.footer {
+		padding: var(--spacing-lg) 0 var(--spacing-xs); /* 32px 0 8px */
+	}
+
+	.footer__content {
+		gap: var(--spacing-sm); /* 16px */
+	}
+
+	.footer__intro {
+		gap: var(--spacing-lg); /* 32px */
+	}
+
+	.footer__tagline {
+		font-size: var(--font-size-md);
+	}
+
+	.footer__contact-item {
+		width: 180px;
+		padding: var(--spacing-lg) var(--spacing-lg); /* 48px 32px */
+		font-size: var(--font-size-md);
+	}
+
+	.footer__contact-item p {
+		font-size: var(--font-size-md);
+	}
+}
+
+/* Desktop grande / Laptops (até 1199px) */
+@media (max-width: 1199px) {
+	.footer {
+		padding: var(--spacing-md) 0 var(--spacing-xs); /* 24px 0 8px */
+	}
+
+	.footer__content {
+		gap: var(--spacing-xs); /* 8px */
+	}
+
+	.footer__intro {
+		gap: var(--spacing-md); /* 24px */
+	}
+
+	.social-links {
+		gap: var(--spacing-lg); /* 32px */
+	}
+
+	.footer__tagline {
+		font-size: var(--font-size-sm);
+	}
+
+	.footer__contact-item {
+		font-size: var(--font-size-base);
+	}
+
+	.footer__contact-item p {
+		font-size: var(--font-size-sm);
+	}
+
+	.footer__copyright {
+		font-size: var(--font-size-xs);
+	}
+}
+
+/* Tablet em paisagem (até 991px) */
+@media (max-width: 991px) {
+	.footer {
+		gap: var(--spacing-md); /* 24px */
+	}
+
+	.footer__content {
+		grid-template-columns: 1fr;
+		gap: var(--spacing-xl); /* 48px */
+	}
+
+	.footer__intro {
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.footer__tagline {
+		margin-right: 0;
+		text-align: center;
+		font-size: var(--font-size-sm);
+	}
+
+	.footer__contact-links {
+		gap: var(--spacing-md); /* 24px */
+	}
+
+	.footer__contact-item {
+		font-size: var(--font-size-base);
+	}
+
+	.footer__contact-item p {
+		font-size: var(--font-size-sm);
+	}
+}
+
+/* Tablet em retrato / Mobile grande (até 767px) */
+@media (max-width: 767px) {
+	.footer {
+		gap: var(--spacing-sm); /* 16px */
+	}
+
+	.footer__contact-item {
+		width: 100%;
+		padding: var(--spacing-lg) var(--spacing-md); /* 32px 24px */
+		font-size: var(--font-size-sm);
+	}
+
+	.footer__contact-item p {
+		font-size: var(--font-size-xs);
+	}
+
+	.footer__logo {
+		width: 200px;
+	}
+
+	.social-links {
+		gap: var(--spacing-md); /* 24px */
+	}
+}
+
+/* Mobile padrão (até 575px) */
+@media (max-width: 575px) {
+	.footer {
+		padding: var(--spacing-sm) 0 var(--spacing-xs); /* 16px 0 8px */
+	}
+
+	.footer__contact-item {
+		padding: var(--spacing-md) var(--spacing-sm); /* 24px 16px */
+		font-size: var(--font-size-sm);
+		box-shadow: 6px 6px 0px var(--color-primary-accent);
+	}
+
+	.footer__contact-item p {
+		font-size: var(--font-size-xs);
+	}
+
+	.social-links {
+		width: 85%;
+	}
+
+	.footer__copyright {
+		flex-direction: column;
+		gap: var(--spacing-xs); /* 8px */
+		font-size: 0.3rem;
+	}
+}

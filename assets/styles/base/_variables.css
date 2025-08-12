@@ -39,9 +39,11 @@
 	--font-size-7xl: 3.2rem; /* ~51.2px */
 
 	/* Tamanhos de Ícones */
-	--font-size-icon-sm: 1.5rem; /* 24px para ícones menores */
-	--font-size-icon-md: 2rem; /* 32px para ícones médios */
-	--font-size-icon-lg: 5rem; /* 80px para ícones grandes */
+	--font-size-icon-xs: 1.5rem; /* 24px para ícones menores */
+	--font-size-icon-sm: 2rem; /* 24px para ícones menores */
+	--font-size-icon-md: 2.5rem; /* 32px para ícones médios */
+	--font-size-icon-lg: 4rem; /* 32px para ícones médios */
+	--font-size-icon-xl: 5rem; /* 80px para ícones grandes */
 
 	/* Espaçamento */
 	--spacing-xs: 0.5rem; /* 8px */
@@ -50,4 +52,11 @@
 	--spacing-lg: 2rem; /* 32px */
 	--spacing-xl: 3rem; /* 48px */
 	--spacing-2xl: 4rem; /* 64px */
+
+	/* Breakpoints */
+	--breakpoint-xl: 1535px; /* Desktop extra-grande (seus estilos padrão, sem media query, são para telas > 1535px) */
+	--breakpoint-lg: 1199px; /* Desktop grande / Laptops (ex: até 1200px) */
+	--breakpoint-md: 991px; /* Tablet em paisagem (ex: até 992px) */
+	--breakpoint-sm: 767px; /* Tablet em retrato / Mobile grande (ex: até 768px) */
+	--breakpoint-xs: 575px; /* Mobile padrão (ex: até 576px) */
 }

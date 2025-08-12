@@ -29,3 +29,12 @@
 /* Utility Styles */
 @import url('/assets/styles/utils/_animations.css');
 @import url('/assets/styles/utils/_helpers.css');
+
+/* Medias-Queries */
+@import url('/assets/styles/responsive/base/_typography-responsive.css');
+@import url('/assets/styles/responsive/components/_buttons-responsive.css');
+@import url('/assets/styles/responsive/components/_sections-responsive.css');
+@import url('/assets/styles/responsive/components/_social-links-responsive.css');
+@import url('/assets/styles/responsive/layout/_footer-responsive.css');
+@import url('/assets/styles/responsive/layout/_header-responsive.css');
+@import url('/assets/styles/responsive/layout/_main-responsive.css');
