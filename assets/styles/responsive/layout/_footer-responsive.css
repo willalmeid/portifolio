@@ -126,6 +126,7 @@
 	}
 
 	.social-links {
+		width: 70%;
 		gap: var(--spacing-md); /* 24px */
 	}
 }

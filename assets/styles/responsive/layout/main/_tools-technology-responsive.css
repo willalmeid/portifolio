@@ -1,0 +1,90 @@
+/*
+    ==========================================================================
+    Layout: Seção de Ferramentas - Media Queries
+    Estilos responsivos para a seção de ferramentas.
+    ==========================================================================
+*/
+
+/* Desktop extra-grande (até 1535px) */
+@media (max-width: 1535px) {
+	#tools-technology__items {
+		padding: var(--spacing-md) 0; /* 24px */
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* Desktop grande / Laptops (até 1199px) */
+@media (max-width: 1199px) {
+	#tools-technology__items {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Tablet em paisagem (até 991px) */
+@media (max-width: 991px) {
+	#tools-technology__items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.tool:hover {
+		transform: none;
+	}
+
+	.tool:hover .tool__icon {
+		transform: none;
+	}
+
+	.tool p {
+		font-size: var(--font-size-base);
+	}
+
+	.tool__proficiency {
+		margin-top: 20px;
+	}
+
+	.tool__proficiency-value {
+		opacity: 1;
+	}
+
+	.tool:hover .tool__proficiency-value {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* Tablet em retrato / Mobile grande (até 767px) */
+@media (max-width: 767px) {
+	#tools-technology__items {
+		grid-template-columns: 1fr;
+		gap: var(--spacing-sm);
+	}
+
+	.tool {
+		width: 80%;
+		margin: 0 auto;
+		min-height: auto;
+	}
+
+	.tool p {
+		font-size: var(--font-size-base);
+	}
+
+	.tool__icon {
+		font-size: var(--font-size-icon-lg);
+	}
+}
+
+/* Mobile padrão (até 575px) */
+@media (max-width: 575px) {
+	.tool {
+		width: 95%;
+	}
+
+	.tool p {
+		font-size: var(--font-size-sm);
+	}
+
+	.tool__icon {
+		font-size: var(--font-size-icon-lg);
+	}
+}

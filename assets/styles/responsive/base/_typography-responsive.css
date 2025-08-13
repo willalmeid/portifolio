@@ -8,21 +8,6 @@
 /* Desktop extra-grande (até 1535px) */
 @media (max-width: 1535px) {
 	h1 {
-		font-size: var(--font-size-5xl);
-	}
-
-	h2 {
-		font-size: var(--font-size-4xl);
-	}
-
-	.text-highlight {
-		font-size: var(--font-size-6xl);
-	}
-}
-
-/* Desktop grande / Laptops (até 1199px) */
-@media (max-width: 1199px) {
-	h1 {
 		font-size: var(--font-size-4xl);
 	}
 
@@ -30,8 +15,31 @@
 		font-size: var(--font-size-3xl);
 	}
 
+	h3 {
+		font-size: var(--font-size-xl);
+	}
+
 	.text-highlight {
 		font-size: var(--font-size-5xl);
+	}
+}
+
+/* Desktop grande / Laptops (até 1199px) */
+@media (max-width: 1199px) {
+	h1 {
+		font-size: var(--font-size-3xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-2xl);
+	}
+
+	h3 {
+		font-size: var(--font-size-lg);
+	}
+
+	.text-highlight {
+		font-size: var(--font-size-4xl);
 	}
 }
 
@@ -45,6 +53,10 @@
 		font-size: var(--font-size-2xl);
 	}
 
+	h3 {
+		font-size: var(--font-size-md);
+	}
+
 	.text-highlight {
 		font-size: var(--font-size-4xl);
 	}
@@ -53,11 +65,11 @@
 /* Tablet em retrato / Mobile grande (até 767px) */
 @media (max-width: 767px) {
 	h1 {
-		font-size: var(--font-size-4xl);
+		font-size: var(--font-size-xl);
 	}
 
 	h2 {
-		font-size: var(--font-size-xl);
+		font-size: var(--font-size-lg);
 	}
 
 	h3 {
@@ -65,7 +77,7 @@
 	}
 
 	.text-highlight {
-		font-size: var(--font-size-3xl);
+		font-size: var(--font-size-2xl);
 	}
 }
 

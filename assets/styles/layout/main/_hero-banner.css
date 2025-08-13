@@ -1,0 +1,112 @@
+/*
+	==========================================================================
+	Seção Hero Banner
+	==========================================================================
+*/
+
+.hero-banner {
+	width: 100%;
+	height: calc(100vh - 60px); /* 60px é a altura do header */
+	padding: 30px 0;
+	background-color: var(--color-background-dark);
+	scroll-margin-top: 60px; /* offset para rolagem suave */
+	position: relative;
+}
+
+.hero-banner__container {
+	width: 90%;
+	height: calc(100% - 80px);
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-banner__image {
+	width: 42%;
+	height: auto;
+}
+
+.hero-banner__image img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	animation: avatar-bounce 1.5s ease-in forwards infinite alternate-reverse;
+}
+
+.hero-banner__content {
+	width: 50%;
+	height: 100%;
+	padding: 0 var(--spacing-md); /* 20px */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.hero-banner__titles {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hero-banner__titles p {
+	margin-bottom: 0;
+}
+
+.hero-banner__specialization {
+	font-size: var(--font-size-4xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-light);
+}
+
+.hero-banner__specialization .text-highlight {
+	font-size: var(--font-size-5xl);
+}
+
+.about-me {
+	width: 80%;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md); /* 20px */
+}
+
+.about-me p {
+	margin-bottom: 0;
+	text-align: justify;
+	font-size: var(--font-size-xl);
+	color: var(--color-text-light);
+}
+
+.about-me__call-to-action {
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-text-dark);
+	animation: call-to-action 1.5s infinite alternate-reverse;
+}
+
+.hero-banner__content .links {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-around;
+}
+
+/* --- Seta para Baixo --- */
+#arrow-down {
+	position: absolute;
+	bottom: var(--spacing-md); /* 30px */
+	left: 50%;
+	transform: translateX(-50%);
+	animation: arrow-bounce 1s ease-in-out alternate infinite;
+
+	font-size: var(--font-size-6xl);
+	color: var(--color-text-dark);
+}

@@ -1,0 +1,87 @@
+/*
+    ==========================================================================
+    Layout: Seção de Projetos - Media Queries
+    Estilos responsivos para a seção de projetos.
+    ==========================================================================
+*/
+
+/* Desktop extra-grande (até 1535px) */
+@media (max-width: 1535px) {
+	#project__items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.project:hover {
+		transform: scale(1.03);
+	}
+
+	.project:hover .project__information h3 {
+		transform: scale(1.03);
+	}
+}
+
+/* Desktop grande / Laptops (até 1199px) */
+@media (max-width: 1199px) {
+}
+
+/* Tablet em paisagem (até 991px) */
+@media (max-width: 991px) {
+	#project__items {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.project {
+		width: 80%;
+	}
+
+	.project:hover {
+		transform: none;
+		box-shadow: none;
+		border-color: var(--color-accent-translucent-30);
+	}
+
+	.project:hover .project__information h3 {
+		transform: none;
+	}
+
+	.project__information p {
+		font-size: var(--font-size-sm);
+	}
+}
+
+/* Tablet em retrato / Mobile grande (até 767px) */
+@media (max-width: 767px) {
+	#project__items {
+		grid-template-columns: 1fr;
+		gap: var(--spacing-md);
+	}
+
+	.project {
+		min-height: auto;
+	}
+
+	.project__access {
+		flex-direction: column;
+		gap: var(--spacing-sm);
+	}
+}
+
+/* Mobile padrão (até 575px) */
+@media (max-width: 575px) {
+	#project__items {
+		padding: var(--spacing-md) 0; /* 24px */
+	}
+
+	.project {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.project__information p {
+		font-size: var(--font-size-xs);
+	}
+
+	.project__access a {
+		width: 100%;
+	}
+}

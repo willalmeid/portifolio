@@ -16,7 +16,7 @@
 /* Desktop grande / Laptops (até 1199px) */
 @media (max-width: 1199px) {
 	.button {
-		padding: var(--spacing-xs) var(--spacing-md); /* 8px 24px */
+		padding: 12px var(--spacing-md); /* 8px 24px */
 		font-size: var(--font-size-base); /* 16px */
 	}
 }

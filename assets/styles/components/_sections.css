@@ -18,12 +18,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 50px;
 }
 
 .section__title {
 	width: 100%;
-	margin-bottom: var(--spacing-xl); /* 50px */
-	padding-bottom: var(--spacing-sm); /* 10px */
+	padding-bottom: 8px;
 	text-align: center;
 	font-size: var(--font-size-4xl); /* 40px */
 	color: var(--color-text-dark);
