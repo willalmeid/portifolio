@@ -1,8 +1,8 @@
 /*
-   ==========================================================================
-   Layout: Cabeçalho
-   Estilos para o cabeçalho principal da página.
-   ==========================================================================
+==========================================================================
+	Layout: Cabeçalho
+	Estilos para o cabeçalho principal da página.
+==========================================================================
 */
 
 .header {
@@ -20,13 +20,18 @@
 	justify-content: center;
 }
 
+.header__nav {
+	width: 60%;
+}
+
 .header__nav ul {
 	width: 100%;
 
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: var(--spacing-2xl); /* 64px */
+	justify-content: space-around;
+	gap: var(--spacing-2xl);
 }
 
 .header__nav .nav-item {
@@ -34,7 +39,7 @@
 }
 
 .header__nav .nav-link {
-	font-size: var(--font-size-md);
+	font-size: var(--font-size-md); /* Valor padrão para telas grandes */
 	font-weight: var(--font-weight-bolder);
 	color: var(--color-text-dark);
 	position: relative;
@@ -58,4 +63,65 @@
 
 .header__nav .nav-item.active .nav-link::before {
 	width: 100%;
+}
+
+/*
+==========================================================================
+	Layout: Cabeçalho - Media Queries
+	Estilos responsivos para o cabeçalho.
+==========================================================================
+*/
+
+@media (max-width: 1535px) {
+	.header {
+		height: 50px;
+	}
+
+	.header__nav {
+		width: 55%;
+	}
+
+	.header__nav ul {
+		gap: var(--spacing-xl);
+	}
+}
+
+@media (max-width: 1199px) {
+	.header {
+		height: 45px;
+	}
+
+	.header__nav {
+		width: 60%;
+	}
+
+	.header__nav ul {
+		gap: var(--spacing-lg);
+	}
+
+	.header__nav .nav-link {
+		font-size: var(--font-size-sm);
+	}
+}
+
+@media (max-width: 767px) {
+	.header {
+		height: auto;
+		padding: var(--spacing-sm);
+		flex-direction: column;
+	}
+
+	.header__nav ul {
+		gap: var(--spacing-sm);
+	}
+}
+
+@media (max-width: 575px) {
+	.header__nav {
+		width: 100%;
+	}
+
+	.header__nav ul {
+		gap: var(--spacing-xs);
+	}
 }

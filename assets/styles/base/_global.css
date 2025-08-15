@@ -1,17 +1,20 @@
 /* 
-   ==========================================================================
-   Base: Estilos Globais
-   Propriedades aplicadas a todo o corpo do documento.
-   ==========================================================================
+  ==========================================================================
+  	Base: Estilos Globais
+  	Propriedades aplicadas a todo o corpo do documento.
+  ==========================================================================
 */
 
-html,
-body {
+html {
+	font-size: 100%;
 	font-family: var(--font-family-base);
-	font-size: 16px;
 	font-weight: var(--font-weight-regular);
 	color: var(--color-text-dark);
 	background-color: var(--color-background-light);
+}
+
+body {
+	min-height: 100vh;
 }
 
 main {

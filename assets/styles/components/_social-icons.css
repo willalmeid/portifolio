@@ -1,0 +1,47 @@
+/*
+    ==========================================================================
+    Componentes: Ícones Sociais
+    Estilos para os ícones sociais.
+    ==========================================================================
+*/
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	gap: var(--spacing-xl);
+}
+
+.social-icons a i {
+	font-size: var(--font-size-icon-md);
+	color: var(--color-text-dark);
+	transition: all 0.3s ease;
+}
+
+.social-icons a i:hover {
+	@media (hover: hover) and (pointer: fine) {
+		color: var(--color-primary-accent);
+		transform: translateY(3px);
+		filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+	}
+}
+
+/*
+    ==========================================================================
+    Ícones Sociais - Media Queries
+    Estilos responsivos para os ícones sociais.
+    ==========================================================================
+*/
+@media (max-width: 1535px) {
+	.social-icons {
+		gap: var(--spacing-lg);
+	}
+
+	.social-icons a i {
+		font-size: var(--font-size-icon-sm);
+	}
+}
+
+@media (max-width: 991px) {
+	.social-icons {
+		gap: var(--spacing-md);
+	}
+}

@@ -77,7 +77,7 @@ export async function loadProjects() {
                 </div>
 
                 <div class="project__tools">
-                    <h4>Principais Tecnologias Utilizadas</h4>
+                    <h4>Principais Tecnologias</h4>
                     <ul class="project__tech-list">
                         ${techIconsHtml}
                     </ul>

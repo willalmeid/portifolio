@@ -1,15 +1,14 @@
 /*
-   =========================================================================
-   Componentes: Seções (Configurações Genéricas)
-   Estilos base para todas as seções reutilizáveis.
-   ==========================================================================
+    =========================================================================
+    Componentes: Seções
+    Estilos base para todas as seções reutilizáveis.
+    ==========================================================================
 */
-
 .section {
-	width: 100%;
+	width: 90%;
 	max-width: 1680px;
-	margin: var(--spacing-xl); /* 50px */
-	padding: var(--spacing-2xl); /* 64px */
+	margin: var(--spacing-xl) auto;
+	padding: var(--spacing-2xl);
 	background-color: var(--color-light-translucent-30);
 	border-radius: 8px;
 	box-shadow: 0 0px 12px var(--color-primary-accent);
@@ -18,14 +17,59 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 50px;
+	gap: var(--spacing-md);
 }
 
 .section__title {
 	width: 100%;
 	padding-bottom: 8px;
 	text-align: center;
-	font-size: var(--font-size-4xl); /* 40px */
+	font-size: var(--font-size-4xl);
 	color: var(--color-text-dark);
 	border-bottom: 2px solid var(--color-primary-accent);
+}
+
+/*
+    ==========================================================================
+    Seções - Media Queries
+    Estilos responsivos para as seções.
+    ==========================================================================
+*/
+@media (max-width: 1535px) {
+	.section {
+		padding: var(--spacing-xl);
+	}
+
+	.section__title {
+		font-size: var(--font-size-3xl);
+	}
+}
+
+@media (max-width: 1199px) {
+	.section {
+		padding: var(--spacing-xl) var(--spacing-md);
+	}
+}
+
+@media (max-width: 991px) {
+	.section {
+		margin: var(--spacing-sm) auto;
+		padding: var(--spacing-lg) var(--spacing-sm);
+		gap: var(--spacing-md);
+	}
+
+	.section__title {
+		font-size: var(--font-size-2xl);
+	}
+}
+
+@media (max-width: 767px) {
+	.section {
+		margin: var(--spacing-xs) auto;
+		padding: var(--spacing-md) var(--spacing-sm);
+	}
+
+	.section__title {
+		font-size: var(--font-size-xl);
+	}
 }

@@ -1,12 +1,12 @@
 /*
-   ==========================================================================
-   Componentes: Botões
-   Estilos para os componentes de botão reutilizáveis.
-   ==========================================================================
+    ==========================================================================
+    Componentes: Botões
+    Estilos para os componentes de botão reutilizáveis.
+    ==========================================================================
 */
 
 .button {
-	padding: var(--spacing-sm) var(--spacing-2xl); /* 16px 32px */
+	padding: var(--spacing-sm) var(--spacing-2xl);
 	text-align: center;
 	text-decoration: none;
 	font-size: var(--font-size-lg);
@@ -27,9 +27,34 @@
 }
 
 .button--primary:hover {
-	color: var(--color-background-dark);
-	background-color: var(--color-primary-accent);
-	border-color: var(--color-primary-accent);
-	transform: translateY(3px);
-	filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+	@media (hover: hover) and (pointer: fine) {
+		color: var(--color-background-dark);
+		background-color: var(--color-primary-accent);
+		border-color: var(--color-primary-accent);
+		transform: translateY(3px);
+		filter: drop-shadow(0px 0px 10px var(--color-dark-translucent-30));
+	}
+}
+
+/*
+    ==========================================================================
+    Botões - Media Queries
+    Estilos responsivos para os botões.
+    ==========================================================================
+*/
+
+@media (max-width: 1535px) {
+	.button {
+		padding: var(--spacing-sm) var(--spacing-xl);
+		font-size: var(--font-size-md);
+	}
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 767px) {
+	.button {
+		font-size: var(--font-size-sm);
+	}
 }

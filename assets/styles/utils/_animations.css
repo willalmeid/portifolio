@@ -1,19 +1,18 @@
 /*
-   ==========================================================================
-   Utilidades: Animações Keyframes
-   Definições de animações reutilizáveis.
-   ==========================================================================
+==========================================================================
+	Utilidades: Animações Keyframes
+	Definições de animações reutilizáveis.
+==========================================================================
 */
+
 @keyframes avatar-bounce {
 	0% {
 		filter: drop-shadow(0 0 2.5px var(--color-accent-translucent-30))
-			drop-shadow(0 0 5px var(--color-accent-translucent-30))
-			drop-shadow(0 0 7.5px var(--color-accent-translucent-30));
+			drop-shadow(0 0 5px var(--color-accent-translucent-30)) drop-shadow(0 0 7.5px var(--color-accent-translucent-30));
 	}
 	100% {
 		filter: drop-shadow(0 0 10px var(--color-accent-translucent-30))
-			drop-shadow(0 0 20px var(--color-accent-translucent-30))
-			drop-shadow(0 0 30px var(--color-accent-translucent-30));
+			drop-shadow(0 0 20px var(--color-accent-translucent-30)) drop-shadow(0 0 30px var(--color-accent-translucent-30));
 	}
 }
 

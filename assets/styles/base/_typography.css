@@ -1,10 +1,11 @@
 /*
-   ==========================================================================
-   Base: Tipografia
-   Estilos globais para cabeçalhos, parágrafos e textos de destaque.
-   ==========================================================================
+==========================================================================
+	Base: Tipografia
+	Estilos globais para cabeçalhos, parágrafos e textos de destaque.
+==========================================================================
 */
 
+/* Estilo para todos os títulos */
 h1,
 h2,
 h3,
@@ -14,44 +15,138 @@ h6 {
 	line-height: 1.2;
 }
 
+/* Tamanhos base (para desktop extra-grande) */
 h1 {
-	font-size: var(--font-size-5xl);
+	font-size: var(--font-size-7xl);
 	font-weight: var(--font-weight-bold);
-	color: var(--color-text-light);
+	color: var(--color-background-light);
 }
 
 h2 {
-	font-size: var(--font-size-4xl);
+	font-size: var(--font-size-5xl);
 }
 
 h3 {
-	margin-bottom: var(--spacing-xs);
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-xl);
 	font-weight: var(--font-weight-bold);
-	color: var(--color-background-dark);
+	color: var(--color-text-dark);
 }
 
 h4 {
-	margin-bottom: var(--spacing-sm); /* 16px */
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-lg);
 	color: var(--color-text-dark);
 }
 
 p {
-	margin-bottom: var(--spacing-sm);
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-md);
 	line-height: 1.6;
 	color: var(--color-text-dark);
-	flex-grow: 1;
+	margin-bottom: var(--spacing-sm);
 }
 
 .text-highlight {
-	font-size: var(--font-size-6xl);
 	font-weight: var(--font-weight-bolder);
 	color: var(--color-text-dark);
+	transition: color 0.3s ease-in-out;
 }
 
 .text-highlight:hover {
-	color: var(--color-primary-accent);
-	filter: drop-shadow(0px 0px 10px var(--color-light-translucent-30));
+	@media (hover: hover) and (pointer: fine) {
+		color: var(--color-primary-accent);
+		filter: drop-shadow(0px 0px 10px var(--color-accent-translucent-30));
+	}
+}
+
+/*
+==========================================================================
+	Tipografia - Media Queries
+	Estilos responsivos para os tamanhos de fonte.
+==========================================================================
+*/
+
+/* Desktop extra-grande (até 1535px) */
+@media (max-width: 1535px) {
+	h1 {
+		font-size: var(--font-size-4xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-3xl);
+	}
+
+	h3 {
+		font-size: var(--font-size-xl);
+	}
+
+	h4 {
+		font-size: var(--font-size-md);
+	}
+
+	p {
+		font-size: var(--font-size-sm);
+	}
+}
+
+/* Desktop grande / Laptops (até 1199px) */
+@media (max-width: 1199px) {
+	h1 {
+		font-size: var(--font-size-3xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-3xl);
+	}
+
+	h3 {
+		font-size: var(--font-size-lg);
+	}
+
+	h4 {
+		font-size: var(--font-size-sm);
+	}
+
+	p {
+		font-size: var(--font-size-sm);
+	}
+}
+
+/* Tablet em paisagem (até 991px) */
+@media (max-width: 991px) {
+	h1 {
+		font-size: var(--font-size-4xl);
+	}
+
+	p {
+		line-height: 1.5;
+	}
+}
+
+/* Tablet em retrato / Mobile grande (até 767px) */
+@media (max-width: 767px) {
+	h1 {
+		font-size: var(--font-size-xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-lg);
+	}
+
+	h3 {
+		font-size: var(--font-size-base);
+	}
+}
+
+/* Mobile padrão (até 575px) */
+@media (max-width: 575px) {
+	h1 {
+		font-size: var(--font-size-2xl);
+	}
+
+	h2 {
+		font-size: var(--font-size-xl);
+	}
+
+	h3 {
+		font-size: var(--font-size-md);
+	}
 }

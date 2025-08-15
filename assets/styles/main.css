@@ -18,33 +18,17 @@
 
 /* Layout Styles */
 @import url('/assets/styles/layout/_header.css');
+@import url('/assets/styles/layout/_hero.css');
+@import url('/assets/styles/layout/_tools-section.css');
+@import url('/assets/styles/layout/_projects-section.css');
+@import url('/assets/styles/layout/_couses-section.css');
 @import url('/assets/styles/layout/_footer.css');
-
-/* Layout main */
-@import url('/assets/styles/layout/main/_hero-banner.css');
-@import url('/assets/styles/layout/main/_tools-technology.css');
-@import url('/assets/styles/layout/main/_projects.css');
-@import url('/assets/styles/layout/main/_couses.css');
 
 /* Component Styles */
 @import url('/assets/styles/components/_buttons.css');
 @import url('/assets/styles/components/_sections.css');
-@import url('/assets/styles/components/_social-links.css');
+@import url('/assets/styles/components/_social-icons.css');
 
 /* Utility Styles */
 @import url('/assets/styles/utils/_animations.css');
 @import url('/assets/styles/utils/_helpers.css');
-
-/* Medias-Queries */
-@import url('/assets/styles/responsive/base/_typography-responsive.css');
-@import url('/assets/styles/responsive/components/_buttons-responsive.css');
-@import url('/assets/styles/responsive/components/_sections-responsive.css');
-@import url('/assets/styles/responsive/components/_social-links-responsive.css');
-@import url('/assets/styles/responsive/layout/_footer-responsive.css');
-@import url('/assets/styles/responsive/layout/_header-responsive.css');
-
-/* Medias-Queries to main */
-@import url('/assets/styles/responsive/layout/main/_hero-banner-responsive.css');
-@import url('/assets/styles/responsive/layout/main/_tools-technology-responsive.css');
-@import url('/assets/styles/responsive/layout/main/_projects-responsive.css');
-@import url('/assets/styles/responsive/layout/main/_couses-responsive.css');
