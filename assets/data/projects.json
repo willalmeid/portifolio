@@ -1,26 +1,26 @@
 [
 	{
-		"image_path": "project-01.png",
-		"project_title": "Título do Projeto 1",
-		"description": "Uma breve descrição sobre o Projeto 1, explicando seus objetivos e funcionalidades.",
+		"image_path": "project-03.png",
+		"project_title": "Estação Sabor",
+		"description": "Sua rotina com mais sabor. Uma plataforma web para pedir refeições frescas e equilibradas, trazendo uma experiência deliciosa e descomplicada para o seu dia a dia.",
 		"technology": ["fa-brands fa-html5", "fa-brands fa-css3", "fa-brands fa-js"],
-		"link_application": "https://link-para-aplicacao-1.com",
-		"link_code": "https://link-para-codigo-1.com"
+		"link_application": "https://willalmeid.github.io/estacao-sabor/",
+		"link_code": "https://github.com/willalmeid/estacao-sabor"
+	},
+	{
+		"image_path": "project-02.png",
+		"project_title": "Gotas de Sabedoria",
+		"description": "Seu refúgio de palavras. Um projeto web para descobrir e explorar citações e pensamentos inspiradores de forma simples e elegante.",
+		"technology": ["fa-brands fa-html5", "fa-brands fa-css3", "fa-brands fa-js"],
+		"link_application": "https://willalmeid.github.io/gotas-de-sabedoria/",
+		"link_code": "https://github.com/willalmeid/gotas-de-sabedoria"
 	},
 	{
 		"image_path": "project-01.png",
-		"project_title": "Título do Projeto 2",
-		"description": "Este é o Projeto 2, focado em [área do projeto], com recursos como [recurso 1] e [recurso 2].",
-		"technology": ["fa-brands fa-react", "fa-solid fa-database", "fa-brands fa-node"],
-		"link_application": "https://link-para-aplicacao-2.com",
-		"link_code": "https://link-para-codigo-2.com"
-	},
-	{
-		"image_path": "project-01.png",
-		"project_title": "Título do Projeto 3",
-		"description": "Descrição detalhada do Projeto 3, destacando as tecnologias utilizadas e os desafios superados.",
-		"technology": ["fa-brands fa-python", "fa-solid fa-flask", "fa-brands fa-java"],
-		"link_application": "https://link-para-aplicacao-3.com",
-		"link_code": "https://link-para-codigo-3.com"
+		"project_title": "Dragons from House of the Dragon",
+		"description": "Crônicas de Fogo e Sangue. Um guia interativo e elegante para conhecer os dragões de House of the Dragon e seus respectivos cavaleiros. Explore os senhores dos céus de forma simples e envolvente.",
+		"technology": ["fa-brands fa-html5", "fa-brands fa-css3", "fa-brands fa-js"],
+		"link_application": "https://willalmeid.github.io/dragons-house-of-the-dragon/",
+		"link_code": "https://github.com/willalmeid/dragons-house-of-the-dragon"
 	}
 ]
