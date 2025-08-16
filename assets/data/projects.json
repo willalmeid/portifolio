@@ -16,6 +16,14 @@
 		"link_code": "https://github.com/willalmeid/gotas-de-sabedoria"
 	},
 	{
+		"image_path": "project-04.png",
+		"project_title": "Dev Car",
+		"description": "A adrenalina em cada pixel. Uma landing page para a Dev Cars, onde a paixão por carros encontra a tecnologia para criar uma experiência visual impactante, focada na performance e nos detalhes que definem essas máquinas.",
+		"technology": ["fa-brands fa-html5", "fa-brands fa-css3", "fa-brands fa-js"],
+		"link_application": "https://willalmeid.github.io/projeto-car/",
+		"link_code": "https://github.com/willalmeid/projeto-car"
+	},
+	{
 		"image_path": "project-01.png",
 		"project_title": "Dragons from House of the Dragon",
 		"description": "Crônicas de Fogo e Sangue. Um guia interativo e elegante para conhecer os dragões de House of the Dragon e seus respectivos cavaleiros. Explore os senhores dos céus de forma simples e envolvente.",
